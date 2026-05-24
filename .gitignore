@@ -4,5 +4,6 @@ node_modules/
 qa-canonical/
 qa-canonical-live/
 qa-local/
+qa-live-pages/
 *.png.json
 *.log
