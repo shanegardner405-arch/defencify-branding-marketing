@@ -1,6 +1,6 @@
 # Defencify Brandbook V1 — Component Extraction Index
 
-**Canonical location:** `/Users/mr.gardner/Desktop/Claude Code/SilverShore Partners/_clients/Defencify/specs/brandbook-v3-web-edition/`
+**Canonical location:** `/Users/mr.gardner/Repos/defencify-branding-marketing/`
 **Live URL (always in sync via `sync.sh`):** https://defencify-brandbook-fixed.vercel.app
 **Source of truth:** Clementina Villarroel · Kajae · `Brandbook_Defencify 2026.pdf` (May 21 2026)
 **Web edition author:** Shane Gardner · SilverShore · Defencify Design System
@@ -249,7 +249,7 @@ Or local file: `assets/defencify-logo.png`
 **Local files are the canonical source.** Vercel deploy mirrors local. Use `sync.sh` in this directory to push local changes to prod.
 
 ```bash
-cd "/Users/mr.gardner/Desktop/Claude Code/SilverShore Partners/_clients/Defencify/specs/brandbook-v3-web-edition"
+cd "/Users/mr.gardner/Repos/defencify-branding-marketing"
 ./sync.sh
 ```
 
