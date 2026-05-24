@@ -1,0 +1,111 @@
+{
+  "project": "defencify-branding-marketing",
+  "canonicalRoot": "/Users/mr.gardner/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Claude Code/SilverShore Partners/_clients/Defencify/specs/brandbook-v3-web-edition",
+  "liveBase": "https://shanegardner405-arch.github.io/defencify-branding-marketing/",
+  "pages": [
+    {
+      "id": "brand-guidelines",
+      "title": "Brand Guidelines",
+      "path": "/",
+      "file": "index.html",
+      "tocLabel": "Brand guidelines"
+    },
+    {
+      "id": "growth-asset-system",
+      "title": "Growth Asset System",
+      "path": "/growth-asset-system",
+      "file": "growth-asset-system.html",
+      "tocLabel": "Growth asset system"
+    }
+  ],
+  "sharedShell": {
+    "stylesheets": [
+      "assets/brandbook.css",
+      "assets/pdf-shell.css",
+      "assets/growth-system.css"
+    ],
+    "navigation": [
+      "index.html",
+      "growth-asset-system.html"
+    ],
+    "logoAssets": [
+      "assets/defencify-logo.png",
+      "assets/defencify-mark.jpeg"
+    ]
+  },
+  "brandTokens": {
+    "yellow500": "#FCAF32",
+    "yellow100": "#FFF3DD",
+    "yellow700": "#C77C00",
+    "grey200": "#E2E5E7",
+    "grey400": "#B2B2B5",
+    "grey700": "#4F575C",
+    "charcoal": "#2C2F31",
+    "blue500": "#2B439B",
+    "blue900": "#0E1940",
+    "white": "#FFFFFF"
+  },
+  "typography": {
+    "display": "Barlow",
+    "body": "Noto Sans",
+    "headlineTracking": "0",
+    "campaignHeadlineLockup": {
+      "id": "campaign-headline-lockup",
+      "example": "TRAIN EVERY GUARD. SET THE STANDARD.",
+      "fontFamily": "Barlow",
+      "fontWeight": "900",
+      "case": "uppercase",
+      "tracking": "0",
+      "lineHeight": "0.92-0.96",
+      "lineOneColor": "#4F575C",
+      "lineTwoColor": "#FCAF32",
+      "usage": "High-impact campaign, course hero, recruitment, social cover, sales collateral, and embedded-text image-generation headlines"
+    }
+  },
+  "sourceResources": [
+    "/Users/mr.gardner/Downloads/Defencify Design System (1).html",
+    "/Users/mr.gardner/Downloads/Brandbook_Defencify 2026.pdf",
+    "https://defencify-brandbook-fixed.vercel.app/",
+    "assets/pdf/icons-grid.png",
+    "assets/colors_and_type.css"
+  ],
+  "promptContracts": [
+    "prompts/defencify-icon-generation-contract.md",
+    "prompts/defencify-model-comparison-methodology.md"
+  ],
+  "modelComparisonAssets": [
+    "assets/growth/model-comparison/gpt-image-2-photoreal-security-lobby.png",
+    "assets/growth/model-comparison/nano-banana-pro-photoreal-security-lobby.png",
+    "assets/growth/model-comparison/nano-banana-standard-photoreal-security-lobby.png",
+    "assets/growth/model-comparison/gpt-image-2-access-control-icon.png",
+    "assets/growth/model-comparison/nano-banana-pro-access-control-icon.png",
+    "assets/growth/model-comparison/nano-banana-standard-access-control-icon.png"
+  ],
+  "productionSystem": {
+    "sectionId": "production-system",
+    "sourceBrief": "Access control and visitor verification training",
+    "outputCount": 7,
+    "outputs": [
+      "Course module hero",
+      "LMS tile",
+      "LinkedIn post",
+      "Instagram cover",
+      "Sales one-sheet",
+      "Internal SOP",
+      "Email banner"
+    ],
+    "sourceAssets": [
+      "assets/growth/gpt2-security-training-briefing.png",
+      "assets/growth/generated-icons-pro-cropped/course-module.png",
+      "assets/growth/gpt2-security-front-desk.png",
+      "assets/growth/model-comparison/gpt-image-2-photoreal-security-lobby.png",
+      "assets/defencify-logo.png",
+      "assets/growth/generated-icons-pro-cropped/audit-trail.png",
+      "assets/growth/generated-icons-pro-cropped/access-point.png"
+    ]
+  },
+  "verification": [
+    "node scripts/verify-brandbook-page-alignment.mjs",
+    "node scripts/compare-vercel-alignment.mjs"
+  ]
+}

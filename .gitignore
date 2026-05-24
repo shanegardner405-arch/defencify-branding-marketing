@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+.vercel/
+qa-canonical/
+qa-canonical-live/
+qa-local/
+*.png.json
+*.log

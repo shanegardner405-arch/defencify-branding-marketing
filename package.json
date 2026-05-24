@@ -1,0 +1,11 @@
+{
+  "private": false,
+  "name": "defencify-branding-marketing",
+  "version": "1.0.0",
+  "description": "Defencify brand guidelines, marketing asset system, and AI image-generation prompt methodology.",
+  "homepage": "https://shanegardner405-arch.github.io/defencify-branding-marketing/",
+  "scripts": {
+    "verify": "node scripts/verify-brandbook-page-alignment.mjs",
+    "serve": "python3 -m http.server 4182"
+  }
+}

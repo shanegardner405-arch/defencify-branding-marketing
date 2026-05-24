@@ -1,0 +1,470 @@
+/* ============================================================
+   PDF-shell aesthetic overlay
+   Mirrors Brandbook_Defencify 2026.pdf page rhythm:
+   - WHITE content pages (most chapters)
+   - YELLOW solid section-opener pages (between chapters)
+   - DARK GREY for Contents only
+   - Charcoal Barlow Bold top-left title + yellow section number top-right + yellow hairline rule
+   - Asymmetric, generous whitespace, minimalist
+   Load AFTER brandbook.css so these rules win.
+   ============================================================ */
+
+:root {
+  --pdf-bg: #ffffff;
+  --pdf-ink: #4F575C;        /* Grey 700 - body */
+  --pdf-charcoal: #2C2F31;   /* darker charcoal for headlines */
+  --pdf-yellow: #FCAF32;     /* Yellow 500 */
+  --pdf-yellow-dark: #C77C00;
+  --pdf-grey-rule: #E2E5E7;
+  --pdf-grey-page: #4F575C;  /* Contents page bg */
+  --pdf-blue: #2B439B;
+  --pdf-navy: #0E1940;
+}
+
+/* ---------- Body + page baseline ---------- */
+body {
+  background: var(--pdf-bg) !important;
+  color: var(--pdf-ink) !important;
+  font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- Sticky nav: white minimalist ---------- */
+.bb-nav {
+  background: rgba(255,255,255,0.96) !important;
+  border-bottom: 1px solid var(--pdf-grey-rule) !important;
+  box-shadow: none !important;
+}
+.bb-nav__title { color: var(--pdf-charcoal) !important; }
+.bb-nav__title small { color: var(--pdf-ink) !important; opacity: 0.7; }
+.bb-nav__link { color: var(--pdf-ink) !important; opacity: 0.8; }
+.bb-nav__link:hover { color: var(--pdf-yellow-dark) !important; opacity: 1; }
+.bb-nav__link .num { color: var(--pdf-yellow-dark) !important; opacity: 1; }
+
+/* ---------- Universal block reset ---------- */
+.bb-block {
+  background: var(--pdf-bg) !important;
+  color: var(--pdf-ink) !important;
+  padding: 96px 0 !important;
+  border-top: none !important;
+  border-bottom: 1px solid var(--pdf-grey-rule);
+}
+.bb-block--surface {
+  background: var(--pdf-bg) !important;
+  color: var(--pdf-ink) !important;
+}
+.bb-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* ---------- Chapter header (top-left title + top-right yellow number + yellow rule) ---------- */
+.pdf-chapter-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--pdf-yellow);
+  margin-bottom: 48px;
+}
+.pdf-chapter-head__title {
+  font-family: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(48px, 6vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  color: var(--pdf-charcoal);
+  text-transform: uppercase;
+  margin: 0;
+}
+.pdf-chapter-head__title .yellow {
+  color: var(--pdf-yellow);
+}
+.pdf-chapter-head__num {
+  font-family: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 56px);
+  color: var(--pdf-yellow);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.pdf-chapter-head__intro {
+  max-width: 540px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--pdf-ink);
+  margin: 0 0 64px 0;
+}
+
+/* Hide the prior eyebrow + h1 stacking inside chapter heads (we replace with pdf-chapter-head) */
+.pdf-chapter .bb-eyebrow,
+.pdf-chapter .bb-h1 { display: none !important; }
+.pdf-chapter .bb-about__title-block,
+.pdf-chapter .bb-typography__head,
+.pdf-chapter .bb-color__head,
+.pdf-chapter .bb-page-head { display: none !important; }
+
+/* ---------- Body type defaults inside white pages ---------- */
+.bb-block p,
+.bb-block li,
+.bb-block dd,
+.bb-block dt {
+  color: var(--pdf-ink) !important;
+}
+.bb-block strong { color: var(--pdf-charcoal) !important; }
+.bb-block h3, .bb-block h4 {
+  color: var(--pdf-charcoal) !important;
+  font-family: "Barlow", "Helvetica Neue", Arial, sans-serif;
+}
+.bb-eyebrow {
+  color: var(--pdf-ink) !important;
+  opacity: 0.7;
+}
+
+/* ---------- Cover: WHITE minimalist (Clementina pdf p1) ---------- */
+.bb-cover {
+  background: var(--pdf-bg) !important;
+  color: var(--pdf-charcoal) !important;
+  min-height: 100vh;
+  padding: 64px 80px !important;
+  position: relative;
+  overflow: hidden;
+}
+.bb-cover .bb-cover__grid,
+.bb-cover .bb-cover__hex-bg { display: none !important; }
+.bb-cover__inner {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: calc(100vh - 128px);
+  position: relative;
+  z-index: 2;
+}
+.bb-cover__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+.bb-cover__top-meta {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pdf-ink);
+  opacity: 0.6;
+}
+.bb-cover__hero {
+  align-self: end;
+  text-align: right;
+  margin-bottom: 8vh;
+}
+.bb-cover__eyebrow {
+  display: none !important;
+}
+.bb-cover__title {
+  font-family: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(72px, 10vw, 168px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--pdf-charcoal);
+  text-transform: uppercase;
+  margin: 0 0 24px 0;
+  text-align: right;
+}
+.bb-cover__title .accent,
+.bb-cover__title br + * { color: var(--pdf-yellow) !important; }
+/* Style "GUIDELINES" portion yellow via inline span */
+.bb-cover__title { display: block; }
+.bb-cover__sub {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pdf-ink);
+  margin: 0;
+  text-align: right;
+  opacity: 0.7;
+}
+.bb-cover__bottom {
+  border-top: 2px solid var(--pdf-yellow);
+  padding-top: 0;
+  min-height: 2px;
+}
+.bb-cover__bottom > * { display: none !important; }
+
+/* ---------- Yellow section-opener divider pages ---------- */
+.pdf-divider {
+  background: var(--pdf-yellow) !important;
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.pdf-divider__label {
+  font-family: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-align: right;
+}
+.pdf-divider__num {
+  color: var(--pdf-charcoal);
+}
+.pdf-divider__name {
+  color: #ffffff;
+  margin-left: 0.25em;
+}
+
+/* ---------- Contents page: DARK GREY (Clementina pdf p4) ---------- */
+.pdf-contents {
+  background: var(--pdf-grey-page) !important;
+  color: #ffffff !important;
+  min-height: 100vh;
+  padding: 96px 80px !important;
+  border: none !important;
+}
+.pdf-contents .bb-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.pdf-contents__head {
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-size: clamp(80px, 11vw, 168px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+.pdf-contents .bb-toc__grid { display: contents; }
+.pdf-contents .bb-toc__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.pdf-contents .bb-toc__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 16px;
+  padding: 18px 0 10px 0;
+  border-bottom: 1px solid var(--pdf-yellow);
+  text-decoration: none;
+  color: #ffffff;
+}
+.pdf-contents .bb-toc__row:hover {
+  background: rgba(255,255,255,0.04);
+}
+.pdf-contents .bb-toc__num { display: none !important; }
+.pdf-contents .bb-toc__row .main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pdf-contents .bb-toc__row .main strong {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #ffffff !important;
+  letter-spacing: 0;
+}
+.pdf-contents .bb-toc__row .main span {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.7;
+}
+.pdf-contents .bb-toc__page {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--pdf-yellow) !important;
+  letter-spacing: 0;
+}
+
+/* ---------- Welcome + About + Closing: white + asymmetric ---------- */
+.bb-welcome, .bb-block.bb-welcome {
+  padding: 120px 0 !important;
+}
+.bb-welcome__quote {
+  font-family: "Noto Sans", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 22px !important;
+  line-height: 1.55 !important;
+  color: var(--pdf-ink) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  max-width: 720px;
+}
+.bb-welcome__quote .accent { color: var(--pdf-yellow-dark) !important; font-weight: 600; }
+
+.bb-about__top, .bb-mission {
+  background: transparent !important;
+}
+.bb-mission {
+  margin-top: 64px;
+  padding: 0 !important;
+  border-top: 2px solid var(--pdf-yellow);
+  padding-top: 32px !important;
+}
+.bb-mission::before { display: none !important; }
+.bb-mission { color: var(--pdf-ink) !important; }
+.bb-mission__statement { color: var(--pdf-ink) !important; }
+.bb-mission__label { color: var(--pdf-ink) !important; }
+
+/* ---------- About/Mission h1 use charcoal grey not navy ---------- */
+.bb-about__title-block .bb-h1,
+.bb-about .bb-h1 { color: var(--pdf-charcoal) !important; }
+.bb-mission__label {
+  color: var(--pdf-ink) !important;
+  opacity: 0.6;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.bb-mission__statement {
+  font-family: "Noto Sans", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 22px !important;
+  line-height: 1.55 !important;
+  color: var(--pdf-ink) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  max-width: 760px;
+}
+
+/* ---------- Closing ---------- */
+.bb-closing {
+  background: var(--pdf-bg) !important;
+  color: var(--pdf-ink) !important;
+  padding: 120px 0 !important;
+}
+.bb-closing__hex { display: none !important; }
+.bb-closing h2, .bb-closing__title {
+  color: var(--pdf-charcoal) !important;
+}
+
+/* ---------- Color swatches: enforce horizontal strip layout (pdf p9 style) ---------- */
+.bb-color__col .bb-eyebrow,
+.bb-color__col h3 { color: var(--pdf-charcoal) !important; }
+
+/* ---------- Typography page: white + sample blocks ---------- */
+.bb-typography .bb-eyebrow,
+.bb-typography h3 { color: var(--pdf-charcoal) !important; }
+
+/* Type display (BARLOW, NOTO SANS) + sample alphabet rows -> charcoal */
+.bb-type-specimen__meta .name,
+.bb-type-specimen__alphabet .letters {
+  color: var(--pdf-charcoal) !important;
+}
+
+/* Layout sub-section: H1 + H2 hero samples + metadata labels */
+.bb-layout-h1,
+.bb-layout-h2,
+.bb-layout-specimen-row .label .name,
+.bb-scale-meta dd {
+  color: var(--pdf-charcoal) !important;
+}
+
+/* ---------- Buttons: navy variant for "Register Now" per PDF p13 ---------- */
+.bb-button--navy {
+  background: var(--pdf-navy) !important;
+  color: #ffffff !important;
+  border: 1.5px solid var(--pdf-navy) !important;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.bb-button--navy:hover { background: #1a2a5e !important; }
+
+/* ---------- Sub-mark variations: don't squeeze with adjacent empty box ---------- */
+.bb-variations__cell .bb-variations__demo img {
+  display: block;
+  margin: 0 auto;
+  max-width: 90% !important;
+  height: auto;
+}
+.bb-variations__cell .bb-variations__demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px !important;
+  min-height: 120px;
+}
+
+/* ---------- Logo rules: 2-col for Clear Space + Min Size, full row for Variations ---------- */
+.bb-logo-rules {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 32px !important;
+}
+.bb-logo-rule:nth-child(3) {
+  grid-column: 1 / -1;
+}
+.bb-logo-rule:nth-child(3) .bb-logo-rule__demo > div {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 24px !important;
+  align-items: center;
+}
+.bb-logo-rule:nth-child(3) .bb-logo-rule__demo img {
+  width: 100% !important;
+  max-width: 280px !important;
+  margin: 0 auto !important;
+}
+/* Demo height needs to grow for 3 lockup row */
+.bb-logo-rule:nth-child(3) .bb-logo-rule__demo {
+  height: auto !important;
+  min-height: 160px !important;
+  padding: 24px !important;
+  overflow: hidden;
+}
+
+/* ---------- Closing section: text was white-on-dark, now white-on-white ---------- */
+.bb-closing__grid .label,
+.bb-closing__grid .value,
+.bb-closing__grid dt,
+.bb-closing__grid dd,
+.bb-closing dl,
+.bb-closing dt,
+.bb-closing dd,
+.bb-closing__meta,
+.bb-closing__col,
+.bb-closing__col strong,
+.bb-closing p,
+.bb-closing strong { color: var(--pdf-ink) !important; }
+.bb-closing .bb-eyebrow,
+.bb-closing__col .label { color: var(--pdf-charcoal) !important; opacity: 0.6; }
+
+/* ---------- Yellow word accent helper (used in About Us / The Mission) ---------- */
+.pdf-yellow-word { color: var(--pdf-yellow); }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 800px) {
+  .bb-section { padding: 0 32px; }
+  .bb-block { padding: 56px 0 !important; }
+  .pdf-chapter-head { grid-template-columns: 1fr; gap: 8px; align-items: start; }
+  .pdf-chapter-head__num { font-size: 28px; }
+  .bb-cover { padding: 48px 32px !important; }
+  .bb-cover__title { font-size: clamp(56px, 14vw, 96px); }
+  .pdf-divider { padding: 48px 32px; }
+  .pdf-contents { padding: 64px 32px !important; }
+  .pdf-contents .bb-section { grid-template-columns: 1fr; gap: 32px; }
+}
