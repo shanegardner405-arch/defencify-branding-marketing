@@ -4,7 +4,7 @@ This project is the canonical Defencify brand guidelines web edition. The Brand 
 
 ## Canonical Project Root
 
-`/Users/mr.gardner/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Claude Code/SilverShore Partners/_clients/Defencify/specs/brandbook-v3-web-edition`
+`/Users/mr.gardner/Repos/defencify-branding-marketing`
 
 ## Required Pages
 
