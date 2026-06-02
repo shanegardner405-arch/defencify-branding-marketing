@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Image system icon">
+  <rect x="8" y="10" width="32" height="26" fill="none" stroke="#B2B2B5" stroke-width="3"/>
+  <path d="M13 31l8-8 6 6 4-4 4 6" fill="none" stroke="#FCAF32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="17" r="3" fill="#FCAF32"/>
+</svg>

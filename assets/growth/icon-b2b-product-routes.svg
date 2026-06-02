@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Product routes icon">
+  <rect x="8" y="9" width="12" height="12" fill="none" stroke="#B2B2B5" stroke-width="3"/>
+  <rect x="28" y="9" width="12" height="12" fill="none" stroke="#B2B2B5" stroke-width="3"/>
+  <rect x="18" y="27" width="12" height="12" fill="none" stroke="#B2B2B5" stroke-width="3"/>
+  <path d="M20 15h8M24 21v6" fill="none" stroke="#FCAF32" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -123,12 +123,11 @@
       "handoff"
     ],
     "imageryAssets": [
-      "assets/growth/model-comparison/gpt-image-2-photoreal-security-lobby.png",
       "assets/growth/gpt2-security-front-desk.png",
       "assets/growth/gpt2-security-incident-report.png",
-      "assets/growth/gpt2-security-training-briefing.png",
-      "assets/growth/gpt2-security-mobile-patrol.png",
-      "assets/growth/defencify-guard-company-shoulder-patch.svg"
+      "assets/growth/gpt2-b2b-academy-training-team.png",
+      "assets/growth/gpt2-b2b-compliance-dashboard.png",
+      "assets/growth/gpt2-b2b-postready-field-briefing.png"
     ]
   },
   "verification": [

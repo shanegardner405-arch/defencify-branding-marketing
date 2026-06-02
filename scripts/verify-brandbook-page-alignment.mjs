@@ -56,7 +56,15 @@ const requiredFiles = [
   'scripts/generate-defencify-model-comparison.sh',
   'brandbook-manifest.json',
   'b2b-website-wireframes.html',
-  'assets/growth/defencify-guard-company-shoulder-patch.svg',
+  'assets/growth/gpt2-b2b-academy-training-team.png',
+  'assets/growth/gpt2-b2b-compliance-dashboard.png',
+  'assets/growth/gpt2-b2b-postready-field-briefing.png',
+  'assets/growth/icon-b2b-buyer-path.svg',
+  'assets/growth/icon-b2b-product-routes.svg',
+  'assets/growth/icon-b2b-proof-record.svg',
+  'assets/growth/icon-b2b-image-system.svg',
+  'assets/growth/icon-b2b-state-proof.svg',
+  'assets/growth/icon-b2b-training-scale.svg',
   'package.json',
 ];
 
@@ -93,12 +101,15 @@ assert(index.includes('Train every guard.') && index.includes('Set the standard.
 for (const id of ['overview', 'homepage', 'solutions', 'copilot', 'imagery', 'handoff']) {
   assert(b2b.includes(`id="${id}"`), `b2b-website-wireframes.html must include #${id}`);
 }
-assert(b2b.includes('assets/growth/defencify-guard-company-shoulder-patch.svg'), 'b2b-website-wireframes.html must include shoulder patch concept');
-assert(b2b.includes('Shoulder patch concept'), 'b2b-website-wireframes.html must label the shoulder patch concept');
+assert(!b2b.includes('assets/growth/defencify-guard-company-shoulder-patch.svg'), 'b2b-website-wireframes.html must not include fake shoulder patch asset');
+assert(!b2b.includes('Shoulder patch concept'), 'b2b-website-wireframes.html must not label a fake shoulder patch concept');
 for (const phrase of [
   'Strategic brief',
   'Security companies',
   'Live site proof points',
+  'Academy training team',
+  'Compliance dashboard',
+  'PostReady field briefing',
   'AcademyArchitect',
   'Post Ready',
   'PostReady',
@@ -108,6 +119,8 @@ for (const phrase of [
   'Regulatory Intelligence',
   'Lead magnet ladder',
   'Production asset note',
+  'Do not generate new Defencify logos',
+  'brand identity in layout, color, typography, and approved logo assets only',
   'Build handoff',
 ]) {
   assert(b2b.includes(phrase), `b2b-website-wireframes.html must include client-grade B2B content: ${phrase}`);
@@ -154,7 +167,14 @@ for (const asset of modelAssetRefs) {
 const b2bImageryAssets = manifest.b2bWireframes?.imageryAssets || [];
 assert(manifest.b2bWireframes?.file === 'b2b-website-wireframes.html', 'brandbook-manifest.json must list the B2B wireframe file');
 assert((manifest.b2bWireframes?.sections || []).includes('handoff'), 'brandbook-manifest.json must list the B2B handoff section');
-assert(b2bImageryAssets.includes('assets/growth/defencify-guard-company-shoulder-patch.svg'), 'brandbook-manifest.json must list shoulder patch asset');
+for (const asset of [
+  'assets/growth/gpt2-b2b-academy-training-team.png',
+  'assets/growth/gpt2-b2b-compliance-dashboard.png',
+  'assets/growth/gpt2-b2b-postready-field-briefing.png',
+]) {
+  assert(b2bImageryAssets.includes(asset), `brandbook-manifest.json missing B2B imagery asset: ${asset}`);
+}
+assert(!b2bImageryAssets.includes('assets/growth/defencify-guard-company-shoulder-patch.svg'), 'brandbook-manifest.json must not list fake shoulder patch asset');
 for (const asset of b2bImageryAssets) {
   assert(fs.existsSync(path.join(root, asset)), `Missing B2B imagery asset: ${asset}`);
   assert(b2b.includes(asset), `B2B page does not reference imagery asset: ${asset}`);
