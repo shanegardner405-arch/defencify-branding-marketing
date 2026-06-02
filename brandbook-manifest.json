@@ -19,7 +19,7 @@
     },
     {
       "id": "b2b-website-wireframes",
-      "title": "B2B Website Wireframes",
+      "title": "B2B Growth Blueprint",
       "path": "/b2b-website-wireframes",
       "file": "b2b-website-wireframes.html",
       "tocLabel": "B2B wireframes"
@@ -119,7 +119,8 @@
       "homepage",
       "solutions",
       "copilot",
-      "imagery"
+      "imagery",
+      "handoff"
     ],
     "imageryAssets": [
       "assets/growth/model-comparison/gpt-image-2-photoreal-security-lobby.png",

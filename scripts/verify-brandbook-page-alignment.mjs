@@ -90,11 +90,23 @@ assert(growth.includes('id="production-system"'), 'growth-asset-system.html must
 assert(growth.includes('prompts/defencify-model-comparison-methodology.md'), 'growth-asset-system.html must link prompt methodology');
 assert(index.includes('id="campaign-headline-lockup"'), 'index.html must document the campaign headline lockup');
 assert(index.includes('Train every guard.') && index.includes('Set the standard.'), 'index.html must include the approved campaign headline example');
-for (const id of ['overview', 'homepage', 'solutions', 'copilot', 'imagery']) {
+for (const id of ['overview', 'homepage', 'solutions', 'copilot', 'imagery', 'handoff']) {
   assert(b2b.includes(`id="${id}"`), `b2b-website-wireframes.html must include #${id}`);
 }
 assert(b2b.includes('assets/growth/defencify-guard-company-shoulder-patch.svg'), 'b2b-website-wireframes.html must include shoulder patch concept');
 assert(b2b.includes('Shoulder patch concept'), 'b2b-website-wireframes.html must label the shoulder patch concept');
+for (const phrase of [
+  'SS Plus quality gate',
+  'Security companies',
+  'In-house security teams',
+  'Post Ready',
+  'Regulatory Intelligence',
+  'Lead magnet ladder',
+  'Production asset note',
+  'Build handoff',
+]) {
+  assert(b2b.includes(phrase), `b2b-website-wireframes.html must include client-grade B2B content: ${phrase}`);
+}
 
 const modelCardCount = (growth.match(/<article class="model-output-card(?:\s|")/g) || []).length;
 assert(modelCardCount === 6, `growth-asset-system.html must contain exactly 6 model output cards, found ${modelCardCount}`);
@@ -136,6 +148,7 @@ for (const asset of modelAssetRefs) {
 
 const b2bImageryAssets = manifest.b2bWireframes?.imageryAssets || [];
 assert(manifest.b2bWireframes?.file === 'b2b-website-wireframes.html', 'brandbook-manifest.json must list the B2B wireframe file');
+assert((manifest.b2bWireframes?.sections || []).includes('handoff'), 'brandbook-manifest.json must list the B2B handoff section');
 assert(b2bImageryAssets.includes('assets/growth/defencify-guard-company-shoulder-patch.svg'), 'brandbook-manifest.json must list shoulder patch asset');
 for (const asset of b2bImageryAssets) {
   assert(fs.existsSync(path.join(root, asset)), `Missing B2B imagery asset: ${asset}`);
