@@ -6,6 +6,7 @@ Public static brandbook, growth asset system, and AI-generation prompt methodolo
 
 - `index.html` - Defencify brand guidelines, logo, color, typography, iconography, imagery, applications, and AI imagery guidance.
 - `growth-asset-system.html` - Growth asset system showing model comparison, production use cases, custom iconography, and reusable output patterns.
+- `b2b-website-wireframes.html` - First-pass B2B website wireframes for John review, using the approved brand system and photorealistic security imagery.
 
 ## Local Verification
 
