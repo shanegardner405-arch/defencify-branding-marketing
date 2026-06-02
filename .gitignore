@@ -4,6 +4,9 @@ node_modules/
 qa-canonical/
 qa-canonical-live/
 qa-local/
+qa-local*/
 qa-live-pages/
+qa-vercel*/
 *.png.json
 *.log
+.vercel

@@ -96,9 +96,9 @@ for (const id of ['overview', 'homepage', 'solutions', 'copilot', 'imagery', 'ha
 assert(b2b.includes('assets/growth/defencify-guard-company-shoulder-patch.svg'), 'b2b-website-wireframes.html must include shoulder patch concept');
 assert(b2b.includes('Shoulder patch concept'), 'b2b-website-wireframes.html must label the shoulder patch concept');
 for (const phrase of [
-  'SS Plus quality gate',
+  'Strategic brief',
   'Security companies',
-  'Crawl4AI source readback',
+  'Live site proof points',
   'AcademyArchitect',
   'Post Ready',
   'PostReady',
