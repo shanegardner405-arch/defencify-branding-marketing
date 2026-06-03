@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Image production icon">
+  <rect x="8" y="13" width="32" height="24" rx="2" fill="none" stroke="#B2B2B5" stroke-width="3"/>
+  <path d="M18 13l3-5h7l3 5" fill="none" stroke="#B2B2B5" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="24" cy="25" r="6" fill="none" stroke="#FCAF32" stroke-width="3"/>
+  <path d="M35 19h1" fill="none" stroke="#FCAF32" stroke-width="4" stroke-linecap="round"/>
+</svg>

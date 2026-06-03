@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Assessment icon">
+  <circle cx="24" cy="24" r="16" fill="none" stroke="#B2B2B5" stroke-width="3"/>
+  <path d="M24 12v12l8 5" fill="none" stroke="#B2B2B5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15 31l4 4 11-13" fill="none" stroke="#FCAF32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
