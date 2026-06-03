@@ -180,7 +180,7 @@ html {
   letter-spacing: 2px;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--df-y700);
+  color: var(--df-b900);
 }
 
 .growth-eyebrow::before {
@@ -501,7 +501,7 @@ html {
 }
 
 .model-comparison-section {
-  background: linear-gradient(180deg, var(--df-white) 0%, var(--df-surface) 100%);
+  background: var(--df-surface);
 }
 
 .model-prompt-panel {
