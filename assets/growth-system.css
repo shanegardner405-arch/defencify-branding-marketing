@@ -59,9 +59,9 @@ html {
 }
 
 .bb-page-link[aria-current="page"] {
-  color: var(--df-white);
-  border-color: var(--df-b900);
-  background: var(--df-b900);
+  color: var(--df-b900);
+  border-color: var(--df-y500);
+  background: var(--df-y500);
 }
 
 .bb-left-toc {
@@ -86,7 +86,7 @@ html {
   letter-spacing: 1.5px;
   line-height: 1.2;
   text-transform: uppercase;
-  color: var(--df-y700);
+  color: var(--df-b900);
 }
 
 .bb-left-toc .bb-nav__link {
@@ -1643,9 +1643,7 @@ html {
   gap: 42px;
   align-items: center;
   padding: 72px 56px 42px;
-  background:
-    linear-gradient(90deg, rgba(252, 175, 50, 0.12) 0, rgba(252, 175, 50, 0) 36%),
-    linear-gradient(180deg, var(--df-white) 0%, var(--df-surface) 100%);
+  background: var(--df-y100);
   border-bottom: 1px solid var(--df-g200);
 }
 
@@ -1663,11 +1661,12 @@ html {
 }
 
 .b2b-copy-emphasis {
-  color: var(--df-y700);
+  color: var(--df-b900);
   font-weight: 600;
+  background: var(--df-y100);
   text-decoration-line: underline;
-  text-decoration-thickness: 1px;
-  text-decoration-color: rgba(252, 175, 50, 0.56);
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--df-y500);
   text-underline-offset: 3px;
 }
 
@@ -1688,7 +1687,11 @@ html {
   border: 0;
   border-radius: 0;
   background: transparent;
-  color: var(--df-b500);
+  color: var(--df-b900);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--df-y500);
+  text-underline-offset: 5px;
 }
 
 .b2b-hero__actions .bb-button:hover {
@@ -1700,9 +1703,9 @@ html {
   position: relative;
   min-height: 560px;
   overflow: hidden;
-  border: 1px solid rgba(14, 25, 64, 0.16);
+  border: 1px solid var(--df-y500);
   border-radius: 8px;
-  background: var(--df-b900);
+  background: var(--df-y500);
 }
 
 .b2b-hero__media img,
@@ -1722,8 +1725,8 @@ html {
   bottom: 38px;
   padding: 20px 22px;
   border-left: 5px solid var(--df-y500);
-  background: rgba(14, 25, 64, 0.92);
-  color: var(--df-white);
+  background: var(--df-white);
+  color: var(--df-g700);
 }
 
 .b2b-hero__proof strong,
@@ -1749,7 +1752,7 @@ html {
 }
 
 .b2b-hero__proof strong {
-  color: var(--df-y500);
+  color: var(--df-b900);
 }
 
 .b2b-hero__proof span {
@@ -1806,7 +1809,7 @@ html {
 .b2b-architecture span,
 .b2b-regintel-grid span,
 .b2b-handoff-grid span {
-  color: var(--df-y700);
+  color: var(--df-b900);
 }
 
 .b2b-signal-grid strong {
@@ -1868,8 +1871,8 @@ html {
 }
 
 .b2b-source-grid article {
-  border-top-color: var(--df-b900);
-  background: var(--df-surface);
+  border-top-color: var(--df-y700);
+  background: var(--df-y100);
 }
 
 .b2b-card-icon {
@@ -1907,8 +1910,8 @@ html {
   margin-bottom: 26px;
   padding: 34px;
   border: 1px solid var(--df-g200);
-  border-left: 6px solid var(--df-b900);
-  background: linear-gradient(90deg, var(--df-y100) 0, var(--df-white) 34%);
+  border-left: 6px solid var(--df-y500);
+  background: var(--df-y100);
 }
 
 .b2b-source-panel h3 {
@@ -2006,7 +2009,7 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--df-y700);
+  color: var(--df-b900);
 }
 
 .wireframe-hero h3,
@@ -2045,12 +2048,13 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background: var(--df-b900);
-  color: var(--df-white);
+  background: var(--df-y500);
+  color: var(--df-b900);
 }
 
 .wireframe-cta-row span + span {
-  background: var(--df-y100);
+  background: var(--df-white);
+  border: 1px solid var(--df-y500);
   color: var(--df-b900);
 }
 
@@ -2060,10 +2064,10 @@ html {
   gap: 10px;
   align-items: center;
   padding: 18px 22px;
-  border-top: 1px solid var(--df-g200);
-  border-bottom: 1px solid var(--df-g200);
-  background: var(--df-b900);
-  color: var(--df-white);
+  border-top: 1px solid var(--df-y700);
+  border-bottom: 1px solid var(--df-y700);
+  background: var(--df-y500);
+  color: var(--df-b900);
 }
 
 .b2b-proof-strip strong,
@@ -2080,12 +2084,13 @@ html {
 }
 
 .b2b-proof-strip strong {
-  color: var(--df-y500);
+  color: var(--df-b900);
 }
 
 .b2b-proof-strip span {
   padding: 0 10px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  border: 1px solid var(--df-y700);
+  background: var(--df-y100);
 }
 
 .b2b-home-sequence {
@@ -2201,8 +2206,8 @@ html {
 
 .wireframe-side-photo p {
   padding: 24px;
-  background: var(--df-b900);
-  color: var(--df-white);
+  background: var(--df-y500);
+  color: var(--df-b900);
 }
 
 .copilot-wireframe {
@@ -2239,12 +2244,12 @@ html {
 
 .copilot-proof {
   padding: 42px;
-  background: var(--df-b900);
-  color: var(--df-white);
+  background: var(--df-y500);
+  color: var(--df-b900);
 }
 
 .copilot-proof h3 {
-  color: var(--df-white);
+  color: var(--df-b900);
 }
 
 .copilot-proof ul {
@@ -2322,7 +2327,7 @@ html {
   letter-spacing: 1px;
   line-height: 1.2;
   text-transform: uppercase;
-  color: var(--df-y700);
+  color: var(--df-b900);
 }
 
 .b2b-image-disclaimer p {
