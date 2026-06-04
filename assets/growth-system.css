@@ -3365,9 +3365,8 @@ html {
 
 /* state-shape icon on each card */
 .df-mq__state { display: inline-flex; align-items: center; gap: 9px; }
-.df-mq__shape { width: 30px; height: 26px; flex: none; color: var(--df-y500); }
-.df-mq__state > span { position: relative; padding-bottom: 9px; }
-.df-mq__state > span::after { content:""; position:absolute; left:0; bottom:0; width:26px; height:3px; background: var(--df-y500); }
+.df-mq__shape { width: 30px; height: 30px; flex: none; color: var(--df-y500); }
+.df-mq__state > span { color: var(--df-charcoal); }
 
 /* orange cards for vibrance (navy ink for contrast) */
 .df-mq__card.is-orange { background: var(--df-y500); border-color: var(--df-y500); }
@@ -3375,7 +3374,6 @@ html {
 .df-mq__card.is-orange .df-mq__course { color: var(--df-b900); }
 .df-mq__card.is-orange .df-mq__course svg { color: var(--df-b900); }
 .df-mq__card.is-orange .df-mq__state > span { color: var(--df-b900); }
-.df-mq__card.is-orange .df-mq__state > span::after { background: var(--df-b900); }
 .df-mq__card.is-orange .df-mq__hours { color: var(--df-b900); }
 .df-mq__card.is-orange .df-mq__agency { color: rgba(14,25,64,.72); }
 .df-mq__card.is-orange .df-mq__media { background: rgba(14,25,64,.06); }
@@ -3427,3 +3425,28 @@ html {
 
 /* gloss headings need a box to contain the sweep */
 .growth-title .hl.gloss, .growth-h2 .hl.gloss { display: inline-block; }
+
+/* ============================================================
+   v15 (2026-06-04): bold state-shape watermark per card, clean
+   state label, and orange cards spread into more sections.
+   ============================================================ */
+.df-mq__body { position: relative; overflow: hidden; }
+.df-mq__body > span { position: relative; z-index: 1; }
+.df-mq__wm { position: absolute; right: -18px; bottom: -16px; width: 110px; height: 110px; color: var(--df-y500); opacity: .15; pointer-events: none; z-index: 0; }
+.df-mq__card.is-orange .df-mq__wm { color: var(--df-b900); opacity: .2; }
+.df-marquee .df-mq__state { display: block; font-family: var(--df-font-display); font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: -.2px; color: var(--df-charcoal); padding: 0; gap: 0; }
+.df-marquee .df-mq__state::after { display: none; }
+.df-mq__card.is-orange .df-marquee .df-mq__state, .df-mq__card.is-orange .df-mq__state { color: var(--df-b900); }
+
+/* orange card variant across sections (navy ink for contrast) */
+.b2b-verticals article.is-orange, .b2b-products article.is-orange, .b2b-copilot-feats article.is-orange { background: var(--df-y500); border-color: var(--df-y500); }
+.b2b-verticals article.is-orange h3, .b2b-products article.is-orange h3, .b2b-copilot-feats article.is-orange h4 { color: var(--df-b900); }
+.b2b-verticals article.is-orange p, .b2b-products article.is-orange p, .b2b-copilot-feats article.is-orange p { color: rgba(14,25,64,.82); }
+.b2b-verticals article.is-orange::after, .b2b-products article.is-orange::after, .b2b-copilot-feats article.is-orange::after { border-color: var(--df-b900); }
+.b2b-verticals article.is-orange .b2b-carddiv, .b2b-products article.is-orange .b2b-carddiv { background: rgba(14,25,64,.2); }
+.b2b-verticals article.is-orange .b2b-vcta { color: var(--df-b900); border-color: var(--df-b900); }
+.b2b-verticals article.is-orange .b2b-vcta span { color: var(--df-b900); }
+.b2b-verticals article.is-orange .b2b-vcta:hover { background: var(--df-b900); color: #fff; }
+.b2b-products article.is-orange .b2b-ptile { background: rgba(14,25,64,.1); border-color: rgba(14,25,64,.2); }
+.b2b-products article.is-orange a { color: var(--df-b900); }
+.b2b-copilot-feats article.is-orange img { filter: none; }
