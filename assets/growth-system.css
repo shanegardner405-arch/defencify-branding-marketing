@@ -2928,3 +2928,29 @@ html {
 .b2b-verticals p,
 .b2b-capture p,
 .b2b-regintel .copilot-answer { text-wrap: balance; }
+
+/* ---- v5.2: Shane review (2026-06-04): environment-card CTAs + section rhythm ---- */
+
+/* environment cards: each routes to its vertical subpage */
+.b2b-verticals article { display: flex; flex-direction: column; }
+.b2b-verticals p { padding: 8px 26px 18px; }
+.b2b-vcta {
+  margin: auto 26px 24px; align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 9px;
+  font-family: var(--df-font-display); font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--df-b900); background: transparent; border: 1.5px solid var(--df-b900);
+  padding: 10px 16px; border-radius: 8px; text-decoration: none; transition: background .15s ease, color .15s ease;
+}
+.b2b-vcta span { color: var(--df-y500); }
+.b2b-vcta:hover { background: var(--df-b900); color: var(--df-white); }
+.b2b-vcta:hover span { color: var(--df-y500); }
+
+/* alternating section backgrounds: break up the long white stretch.
+   rhythm = white(hero) > navy(proof) > tint > white > tint > navy(close) */
+.b2b-wireframes #verticals,
+.b2b-wireframes #copilot { background: var(--df-surface); }
+/* enclose each tinted band's arrow dividers so there is no white seam */
+.b2b-wireframes #verticals + .b2b-flow,
+.b2b-wireframes #copilot + .b2b-flow,
+.b2b-wireframes .b2b-flow:has(+ #verticals),
+.b2b-wireframes .b2b-flow:has(+ #copilot) { background: var(--df-surface); }
