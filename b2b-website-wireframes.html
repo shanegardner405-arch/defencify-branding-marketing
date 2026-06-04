@@ -28,18 +28,18 @@
 
 <aside class="bb-left-toc" aria-label="B2B website sections">
   <div class="bb-left-toc__label">B2B website</div>
-  <a class="bb-nav__link" href="#overview"><span class="num">01</span>Overview</a>
-  <a class="bb-nav__link" href="#verticals"><span class="num">02</span>Verticals</a>
-  <a class="bb-nav__link" href="#solutions"><span class="num">03</span>Platform</a>
-  <a class="bb-nav__link" href="#copilot"><span class="num">04</span>State brief</a>
-  <a class="bb-nav__link" href="#contact"><span class="num">05</span>Talk to us</a>
+  <a class="bb-nav__link" href="#overview">Overview</a>
+  <a class="bb-nav__link" href="#verticals">Verticals</a>
+  <a class="bb-nav__link" href="#solutions">Platform</a>
+  <a class="bb-nav__link" href="#copilot">State brief</a>
+  <a class="bb-nav__link" href="#contact">Talk to us</a>
 </aside>
 
 <main class="growth-page b2b-wireframes b2b-v3">
 
   <!-- HERO: lead with the multi-state pain, one primary action -->
   <header class="b2b-hero" id="overview">
-    <div class="b2b-hero__copy">
+    <div class="b2b-hero__copy" data-reveal>
       <img src="assets/defencify-logo.png" alt="Defencify Training" class="b2b-logo" />
       <span class="growth-eyebrow">For multi-state security operators</span>
       <h1 class="growth-title">51 rulebooks. <br /><span>One platform.</span></h1>
@@ -50,18 +50,20 @@
       </div>
       <p class="b2b-trialnote">Free 7-day trial. No credit card.</p>
     </div>
-    <div class="b2b-hero__media">
+    <div class="b2b-hero__media" data-reveal style="--i:1">
       <img src="assets/growth/gpt2-b2b-postready-field-briefing.png" alt="Security supervisor briefing an officer on post" />
       <div class="b2b-hero__proof">
         <strong>Sourced from the state boards</strong>
         <span>Every course, renewal path, and certificate stays current with the licensing rules in each state your&nbsp;guards&nbsp;work.</span>
+        <span class="b2b-live"><i aria-hidden="true"></i>Updated daily</span>
       </div>
     </div>
   </header>
 
   <!-- ENTERPRISE PROOF band: the government-sourcing moat + named clients -->
   <section class="b2b-proofband" aria-label="Proof">
-    <div class="b2b-proofband__inner">
+    <div class="b2b-proofband__grid" aria-hidden="true"></div>
+    <div class="b2b-proofband__inner" data-reveal>
       <img class="b2b-proofband__logo" src="assets/logo-defencify-on-dark.svg" alt="Defencify" />
       <p class="b2b-proofband__moat">Every requirement comes <b>directly from the state licensing boards across all 51 jurisdictions</b>, updated daily. Never third-party,&nbsp;never&nbsp;guesswork.</p>
       <div class="b2b-proofband__clients">
@@ -73,7 +75,7 @@
   </section>
 
   <!-- jump nav, framed as outcomes (Adam) -->
-  <nav class="b2b-jumpnav" aria-label="Jump to a section">
+  <nav class="b2b-jumpnav" aria-label="Jump to a section" data-reveal>
     <b>I want to</b>
     <a href="#verticals">Solve my vertical</a>
     <a href="#copilot">See a live state brief</a>
@@ -85,25 +87,25 @@
   <!-- VERTICALS: speak the buyer's world (John) -->
   <section class="growth-section" id="verticals">
     <div class="growth-inner">
-      <header class="b2b-lead">
+      <header class="b2b-lead" data-reveal>
         <span class="growth-eyebrow">Built for your environment</span>
         <h2 class="growth-h2">Your industry has its own rules.</h2>
         <p>We know them. Pick the world you operate in and we will speak to its compliance reality, not a generic pitch.</p>
       </header>
       <div class="b2b-verticals">
-        <article>
+        <article data-reveal>
           <img class="b2b-vimg" src="assets/growth/gpt2-b2b-vertical-guarding.png" alt="Uniformed security officer standing post in a commercial building lobby" />
           <h3>Guarding Companies</h3>
           <p>Multi-site, multi-state operations. Standardize guard training and prove compliance to the clients you bid.</p>
           <a class="b2b-vcta" href="#solutions">Explore guarding <span aria-hidden="true">&rarr;</span></a>
         </article>
-        <article>
+        <article data-reveal>
           <img class="b2b-vimg" src="assets/growth/gpt2-b2b-vertical-highered.png" alt="Campus security officer on a university campus" />
           <h3>Higher Education</h3>
           <p>Campus security with Clery Act obligations and state guard licensing. Train, certify, and document it in one place.</p>
           <a class="b2b-vcta" href="#solutions">Explore campus security <span aria-hidden="true">&rarr;</span></a>
         </article>
-        <article>
+        <article data-reveal>
           <img class="b2b-vimg" src="assets/growth/gpt2-b2b-vertical-casino.png" alt="Security officer monitoring a casino gaming floor" />
           <h3>Casino &amp; Gaming</h3>
           <p>Gaming-specific regulations on top of state guard rules. Keep every officer current and audit-ready across properties.</p>
@@ -118,42 +120,42 @@
   <!-- PLATFORM: one connected story, hire -> train -> deploy -> prove -->
   <section class="growth-section" id="solutions">
     <div class="growth-inner">
-      <header class="b2b-lead">
+      <header class="b2b-lead" data-reveal>
         <span class="growth-eyebrow">One platform</span>
         <h2 class="growth-h2">Hire, train, deploy, prove.</h2>
         <p>Four products, one connected system. A guard you hire flows all the way through to proof you can show your client.</p>
       </header>
       <div class="b2b-products">
-        <article>
+        <article data-reveal>
           <img src="assets/growth/icon-b2b-operator-team.svg" alt="" aria-hidden="true" />
           <h3>For Companies</h3>
           <p>Standardize guard training across every site and state, with branded courses your team actually finishes.</p>
           <a href="#contact">See how &rarr;</a>
         </article>
-        <article>
+        <article data-reveal>
           <img src="assets/growth/icon-b2b-brand-academy.svg" alt="" aria-hidden="true" />
           <h3>Academy&#8203;Architect</h3>
           <p>Build a branded, three-tier academy with badges, certificates, and recognition paths your guards can earn.</p>
           <a href="#contact">See how &rarr;</a>
         </article>
-        <article>
+        <article data-reveal>
           <img src="assets/growth/icon-b2b-post-orders.svg" alt="" aria-hidden="true" />
           <h3>Post&#8203;Ready</h3>
           <p>Turn written post orders into interactive, site-specific training with quizzes and proof of completion.</p>
           <a href="#contact">See how &rarr;</a>
         </article>
-        <article>
+        <article data-reveal>
           <img src="assets/growth/icon-b2b-assessment.svg" alt="" aria-hidden="true" />
           <h3>Proficiency&#8203;Check</h3>
           <p>Digitize final assessments, automate scoring and certificates, and keep audit-ready records for every officer.</p>
           <a href="#contact">See how &rarr;</a>
         </article>
       </div>
-      <div class="b2b-chain" aria-hidden="true">
+      <div class="b2b-chain" aria-hidden="true" data-reveal>
         <span>Hire</span><i></i><span>Train</span><i></i><span>Deploy</span><i></i><span>Prove</span>
       </div>
 
-      <div class="b2b-feature">
+      <div class="b2b-feature" data-reveal>
         <div class="b2b-feature__media">
           <img src="assets/growth/gpt2-security-incident-report.png" alt="Security operations manager reviewing officer records" />
         </div>
@@ -184,13 +186,13 @@
   <!-- REGULATORY INTELLIGENCE: the wow + the one conversion -->
   <section class="growth-section" id="copilot">
     <div class="growth-inner">
-      <header class="b2b-lead">
+      <header class="b2b-lead" data-reveal>
         <span class="growth-eyebrow">Free for your team</span>
         <h2 class="growth-h2">See it answer your state.</h2>
         <p>Ask one question, get a source-backed answer on guard licensing in any state, sourced straight from the state board. The fastest way to see what Defencify does.</p>
       </header>
       <div class="b2b-regintel">
-        <div class="copilot-query">
+        <div class="copilot-query" data-reveal>
           <span>Ask about your state</span>
           <p>Which courses, renewal paths, and certificate requirements apply where our guards operate?</p>
           <div class="copilot-answer">
@@ -198,7 +200,7 @@
             <small>Sourced directly from the Florida Department of Agriculture licensing board &middot; Updated daily</small>
           </div>
         </div>
-        <div class="b2b-capture">
+        <div class="b2b-capture" data-reveal style="--i:1">
           <h3>Get your free state brief</h3>
           <p>Tell us where your guards work. We send a plain-language brief and open your free 7-day trial.</p>
           <span class="field">Work email</span>
@@ -215,7 +217,7 @@
 
   <!-- CONTACT: dual path, trial primary, talk secondary -->
   <section class="b2b-closing" id="contact">
-    <div class="b2b-closing__inner">
+    <div class="b2b-closing__inner" data-reveal>
       <img class="b2b-closing__logo" src="assets/logo-defencify-on-dark.svg" alt="Defencify" />
       <span>Ready when you are</span>
       <h2>Build a security team you can prove</h2>
@@ -236,5 +238,22 @@
   <a class="b2b-cta-primary b2b-cta-ghost" href="#contact">Talk</a>
 </div>
 
+
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nodes = document.querySelectorAll('[data-reveal]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    nodes.forEach(function (n) { n.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  nodes.forEach(function (n) { io.observe(n); });
+})();
+</script>
 </body>
 </html>

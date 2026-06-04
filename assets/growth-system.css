@@ -42,7 +42,7 @@ html {
   border: 1px solid var(--df-g200);
   border-radius: 999px;
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.1px;
   line-height: 1;
@@ -81,7 +81,7 @@ html {
 .bb-left-toc__label {
   margin: 0 8px 18px;
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.5px;
   line-height: 1.2;
@@ -251,7 +251,7 @@ html {
 
 .growth-proof-card {
   border: 1px solid var(--df-g200);
-  border-top: 3px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   background: var(--df-white);
   padding: 24px;
 }
@@ -283,7 +283,7 @@ html {
   background: var(--df-y500);
   color: var(--df-b900);
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -537,7 +537,7 @@ html {
   align-items: center;
   margin-bottom: 34px;
   border: 1px solid var(--df-g200);
-  border-left: 5px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   background: var(--df-white);
   padding: 22px 24px;
 }
@@ -563,7 +563,7 @@ html {
 .model-prompt-panel code,
 .model-output-card code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.35;
   color: var(--df-b900);
   background: var(--df-y100);
@@ -580,7 +580,7 @@ html {
   background: var(--df-b900);
   color: var(--df-white);
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1;
@@ -608,7 +608,7 @@ html {
   display: block;
   margin-bottom: 8px;
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.4px;
   line-height: 1;
@@ -685,7 +685,7 @@ html {
   background: var(--df-y100);
   color: var(--df-y700);
   font-family: var(--df-font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1;
@@ -745,7 +745,7 @@ html {
   align-items: center;
   margin-bottom: 28px;
   border: 1px solid var(--df-g200);
-  border-top: 4px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   background: var(--df-white);
   padding: 24px;
 }
@@ -754,7 +754,7 @@ html {
   display: block;
   margin-bottom: 8px;
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.2px;
   line-height: 1;
@@ -847,7 +847,7 @@ html {
   margin-top: auto;
   padding-top: 10px;
   border-top: 1px solid var(--df-g200);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.45;
   color: var(--df-g700);
 }
@@ -889,7 +889,7 @@ html {
 .mini-square-cover span {
   display: block;
   font-family: var(--df-font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 1px;
@@ -979,7 +979,7 @@ html {
   right: 20px;
   bottom: 20px;
   padding-top: 14px;
-  border-top: 4px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
 }
 
 .mini-square-cover strong {
@@ -1130,7 +1130,7 @@ html {
 
 .custom-icon-card span {
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.2;
@@ -1154,7 +1154,7 @@ html {
   border-bottom: 1px solid var(--df-g200);
   background: var(--df-surface);
   font-family: var(--df-font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -1776,7 +1776,7 @@ html {
   right: 22px;
   bottom: 38px;
   padding: 20px 22px;
-  border-left: 5px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   background: var(--df-white);
   color: var(--df-g700);
 }
@@ -1796,7 +1796,7 @@ html {
 .b2b-regintel-grid span,
 .b2b-handoff-grid span {
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.1px;
   line-height: 1.2;
@@ -1895,7 +1895,7 @@ html {
   margin-bottom: 0;
   padding: 34px;
   border: 1px solid var(--df-g200);
-  border-top: 5px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   background: var(--df-white);
 }
 
@@ -1916,7 +1916,7 @@ html {
   padding: 20px;
   background: var(--df-white);
   border: 1px solid var(--df-g200);
-  border-top: 4px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1962,7 +1962,7 @@ html {
   margin-bottom: 26px;
   padding: 34px;
   border: 1px solid var(--df-g200);
-  border-left: 6px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   background: var(--df-y100);
 }
 
@@ -2128,7 +2128,7 @@ html {
   align-items: center;
   min-height: 30px;
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1;
@@ -2180,14 +2180,14 @@ html {
   margin-top: 18px;
   padding: 18px 20px;
   border: 1px solid var(--df-g200);
-  border-left: 6px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   background: var(--df-white);
 }
 
 .b2b-conversion-map strong,
 .b2b-conversion-map span {
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.2;
@@ -2319,7 +2319,7 @@ html {
 .copilot-answer {
   margin-top: 18px;
   padding: 22px;
-  border-left: 4px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   background: var(--df-white);
   line-height: 1.55;
 }
@@ -2360,7 +2360,7 @@ html {
   border: 1px solid var(--df-y700);
   background: var(--df-y100);
   font-family: var(--df-font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -2460,7 +2460,7 @@ html {
   margin-top: 28px;
   padding: 30px;
   border: 1px solid var(--df-g200);
-  border-left: 6px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   background: var(--df-white);
 }
 
@@ -2478,7 +2478,7 @@ html {
   margin-top: 28px;
   padding: 22px 24px;
   border: 1px solid var(--df-g200);
-  border-left: 6px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   border-radius: 8px;
   background: var(--df-white);
 }
@@ -2694,7 +2694,7 @@ html {
 .wireframe-note,
 .b2b-image-disclaimer {
   border: 0;
-  border-left: 3px solid var(--df-y500);
+  border: 1px solid var(--df-g200);
   background: var(--df-surface);
 }
 
@@ -2715,13 +2715,13 @@ html {
 .b2b-jumpnav b {
   margin-right: 6px;
   font-family: var(--df-font-display);
-  font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+  font-size: 12px; font-weight: 700; letter-spacing: 1.2px;
   text-transform: uppercase; color: var(--df-g700);
 }
 .b2b-jumpnav a {
   display: inline-flex; align-items: center; min-height: 34px;
   padding: 0 15px; border: 1px solid var(--df-g200); border-radius: 999px;
-  font-family: var(--df-font-display); font-size: 11px; font-weight: 700;
+  font-family: var(--df-font-display); font-size: 12px; font-weight: 700;
   letter-spacing: 0.8px; text-transform: uppercase;
   color: var(--df-b900); background: var(--df-white);
 }
@@ -2818,7 +2818,7 @@ html {
 /* reg intel: demo + capture, clean */
 .b2b-regintel { display: grid; grid-template-columns: minmax(0,1fr) minmax(320px,0.82fr); gap: 26px; align-items: stretch; }
 .b2b-regintel .copilot-query { border: 1px solid var(--df-g200); border-radius: 14px; }
-.b2b-capture { display: flex; flex-direction: column; gap: 12px; padding: 34px; border: 1px solid var(--df-g200); border-top: 4px solid var(--df-y500); border-radius: 14px; background: var(--df-white); }
+.b2b-capture { display: flex; flex-direction: column; gap: 12px; padding: 34px; border: 1px solid var(--df-g200); border: 1px solid var(--df-g200); border-radius: 14px; background: var(--df-white); }
 .b2b-capture h3 { margin-bottom: 4px; font-family: var(--df-font-display); font-size: 20px; text-transform: uppercase; color: var(--df-b900); }
 .b2b-capture p { font-size: 14px; line-height: 1.55; color: var(--df-g700); margin-bottom: 4px; }
 .b2b-capture .field { min-height: 44px; display: flex; align-items: center; padding: 0 14px; border: 1px solid var(--df-g200); border-radius: 8px; color: var(--df-g700); font-size: 14px; background: var(--df-white); }
@@ -2843,7 +2843,7 @@ html {
 .b2b-proofband__moat { font-size: 19px; line-height: 1.5; color: var(--df-white); }
 .b2b-proofband__moat b { color: var(--df-y500); }
 .b2b-proofband__clients { display: flex; flex-direction: column; gap: 10px; }
-.b2b-proofband__clients span { font-family: var(--df-font-display); font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+.b2b-proofband__clients span { font-family: var(--df-font-display); font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: rgba(255,255,255,0.6); }
 .b2b-proofband__clients div { display: flex; flex-wrap: wrap; gap: 10px 16px; }
 .b2b-proofband__clients b { font-family: var(--df-font-display); font-size: 17px; font-weight: 700; text-transform: uppercase; color: var(--df-white); }
 .b2b-proofband__stats { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 6px; }
@@ -2954,3 +2954,80 @@ html {
 .b2b-wireframes #copilot + .b2b-flow,
 .b2b-wireframes .b2b-flow:has(+ #verticals),
 .b2b-wireframes .b2b-flow:has(+ #copilot) { background: var(--df-surface); }
+
+/* ============================================================
+   v6 (2026-06-04): Impeccable craft pass for the B2B wireframe.
+   Motion animates transform/opacity ONLY, ease-out-quart, and
+   fully yields to prefers-reduced-motion. Proprietary 51-state
+   system + real interaction states. Scoped to .b2b-wireframe-page.
+   ============================================================ */
+
+/* --- scroll-reveal (opacity + transform only, staggered) --- */
+.b2b-wireframe-page [data-reveal] {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity .5s cubic-bezier(.25,1,.5,1), transform .5s cubic-bezier(.25,1,.5,1);
+  transition-delay: calc(var(--i, 0) * 70ms);
+  will-change: opacity, transform;
+}
+.b2b-wireframe-page [data-reveal].is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .b2b-wireframe-page [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+/* grid stagger via position, no per-node markup */
+.b2b-verticals article:nth-child(2), .b2b-products article:nth-child(2) { --i: 1; }
+.b2b-verticals article:nth-child(3), .b2b-products article:nth-child(3) { --i: 2; }
+.b2b-products article:nth-child(4) { --i: 3; }
+
+/* --- card hover lift (transform, never layout) --- */
+.b2b-verticals article, .b2b-products article {
+  transition: transform .3s cubic-bezier(.25,1,.5,1), border-color .3s ease;
+}
+.b2b-verticals article:hover, .b2b-products article:hover { transform: translateY(-6px); border-color: var(--df-y500); }
+.b2b-verticals .b2b-vimg { transition: transform .5s cubic-bezier(.25,1,.5,1); }
+.b2b-verticals article:hover .b2b-vimg { transform: scale(1.045); }
+
+/* --- real interaction states: visible focus + active press --- */
+.b2b-wireframe-page a:focus-visible,
+.b2b-wireframe-page .field:focus-visible {
+  outline: 2px solid var(--df-y500); outline-offset: 3px; border-radius: 4px;
+}
+.b2b-cta-primary { transition: transform .15s ease, background .2s ease; }
+.b2b-cta-primary:hover { transform: translateY(-2px); }
+.b2b-cta-primary:active { transform: translateY(0); }
+.b2b-vcta:active { transform: translateY(1px); }
+
+/* --- proprietary device: 51-jurisdiction dot grid on the navy proof band --- */
+.b2b-proofband { position: relative; overflow: hidden; }
+.b2b-proofband__grid {
+  position: absolute; inset: 0; pointer-events: none; opacity: .16;
+  background-image: radial-gradient(circle, rgba(255,255,255,.9) 1.3px, transparent 1.7px);
+  background-size: 27px 27px;
+  -webkit-mask-image: linear-gradient(100deg, transparent 4%, #000 42%);
+  mask-image: linear-gradient(100deg, transparent 4%, #000 42%);
+}
+.b2b-proofband__inner { position: relative; z-index: 1; }
+
+/* --- live "updated daily" pulse on the hero proof card --- */
+.b2b-live { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px;
+  font-family: var(--df-font-display); font-size: 12px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--df-b900); }
+.b2b-live i { width: 8px; height: 8px; border-radius: 50%; background: var(--df-y500); }
+@media (prefers-reduced-motion: no-preference) {
+  .b2b-live i { animation: b2bPulse 2.1s ease-out infinite; }
+}
+@keyframes b2bPulse {
+  0% { box-shadow: 0 0 0 0 rgba(252,175,50,.55); }
+  70% { box-shadow: 0 0 0 9px rgba(252,175,50,0); }
+  100% { box-shadow: 0 0 0 0 rgba(252,175,50,0); }
+}
+
+/* --- retire the generic arrow-diamond dividers; band rhythm carries flow --- */
+.b2b-wireframe-page .b2b-flow { display: none; }
+
+/* deliberate section-marker eyebrows: a branded yellow tick, not a generic chip */
+.b2b-wireframes .growth-eyebrow { display: inline-flex; align-items: center; gap: 10px; }
+.b2b-wireframes .growth-eyebrow::before {
+  content: ""; display: inline-block; width: 22px; height: 2px; background: var(--df-y500);
+}
+.b2b-wireframes .b2b-lead .growth-eyebrow { justify-content: center; }
+.b2b-wireframes .b2b-lead .growth-eyebrow::before { display: inline-block; }
