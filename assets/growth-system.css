@@ -3503,3 +3503,32 @@ html {
 .b2b-capture.tone-bright .b2b-trialnote { color: rgba(14,25,64,.72); }
 .b2b-capture__logobox { display: inline-flex; background: var(--df-white); padding: 10px 14px; border-radius: 10px; margin-bottom: 16px; }
 .b2b-capture__logobox .b2b-capture__logo { width: 132px; margin: 0; display: block; }
+
+/* ============================================================
+   v17 (2026-06-04): clean animated warm background on white cards.
+   Combo = subtle warm gradient drift + soft aurora band sweeping.
+   Per-card phase varies brightness across cards. Not a glow/blob.
+   ============================================================ */
+.df-mq__body, .b2b-showcard, .b2b-copilot-feats article, .b2b-products article, .b2b-verticals article, .b2b-capture {
+  position: relative; overflow: hidden;
+  background: linear-gradient(125deg, #ffffff 0%, #FFFCF4 50%, #ffffff 100%);
+  background-size: 240% 240%;
+  animation: cardDrift 24s ease-in-out infinite;
+}
+.df-mq__body::before, .b2b-showcard::before, .b2b-copilot-feats article::before, .b2b-products article::before, .b2b-verticals article::before, .b2b-capture::before {
+  content: ""; position: absolute; top: -30%; left: -95%; width: 130%; height: 160%; z-index: 0; pointer-events: none;
+  background: linear-gradient(105deg, transparent, rgba(252,191,82,.12) 44%, rgba(255,238,200,.19) 54%, transparent);
+  animation: cardAura 20s linear infinite;
+}
+.df-mq__body > *, .b2b-showcard > *, .b2b-copilot-feats article > *, .b2b-products article > *, .b2b-verticals article > *, .b2b-capture > * { position: relative; z-index: 1; }
+@keyframes cardDrift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes cardAura  { 0% { transform: translateX(0); } 100% { transform: translateX(210%); } }
+/* per-card brightness variation (phase offsets) */
+.b2b-copilot-feats article:nth-child(3n+2)::before, .b2b-products article:nth-child(3n+2)::before, .b2b-verticals article:nth-child(3n+2)::before, .b2b-showcard:nth-child(2)::before { animation-delay: -7s; }
+.b2b-copilot-feats article:nth-child(3n)::before, .b2b-products article:nth-child(4)::before, .b2b-verticals article:nth-child(3)::before { animation-delay: -13s; }
+.df-mq__card:nth-child(2n) .df-mq__body::before { animation-delay: -8s; }
+.df-mq__card:nth-child(3n) .df-mq__body::before { animation-delay: -14s; }
+@media (prefers-reduced-motion: reduce) {
+  .df-mq__body, .b2b-showcard, .b2b-copilot-feats article, .b2b-products article, .b2b-verticals article, .b2b-capture { animation: none; }
+  .df-mq__body::before, .b2b-showcard::before, .b2b-copilot-feats article::before, .b2b-products article::before, .b2b-verticals article::before, .b2b-capture::before { display: none; }
+}
