@@ -72,6 +72,8 @@ for (const file of requiredFiles) {
   assert(fs.existsSync(path.join(root, file)), `Missing required project resource: ${file}`);
 }
 
+const normalizedB2b = b2b.replace(/\u200B/g, '').replace(/&#8203;/g, '');
+
 for (const [name, html] of [['index.html', index], ['growth-asset-system.html', growth], ['b2b-website-wireframes.html', b2b]]) {
   assert(html.includes('assets/growth-system.css'), `${name} must include assets/growth-system.css`);
   assert(html.includes('class="bb-nav bb-top-nav"'), `${name} must use the shared top page nav`);
@@ -98,32 +100,29 @@ assert(growth.includes('id="production-system"'), 'growth-asset-system.html must
 assert(growth.includes('prompts/defencify-model-comparison-methodology.md'), 'growth-asset-system.html must link prompt methodology');
 assert(index.includes('id="campaign-headline-lockup"'), 'index.html must document the campaign headline lockup');
 assert(index.includes('Train every guard.') && index.includes('Set the standard.'), 'index.html must include the approved campaign headline example');
-for (const id of ['overview', 'homepage', 'solutions', 'copilot', 'imagery', 'handoff']) {
+for (const id of ['overview', 'verticals', 'solutions', 'copilot', 'contact']) {
   assert(b2b.includes(`id="${id}"`), `b2b-website-wireframes.html must include #${id}`);
 }
 assert(!b2b.includes('assets/growth/defencify-guard-company-shoulder-patch.svg'), 'b2b-website-wireframes.html must not include fake shoulder patch asset');
 assert(!b2b.includes('Shoulder patch concept'), 'b2b-website-wireframes.html must not label a fake shoulder patch concept');
 for (const phrase of [
-  'Strategic brief',
-  'Security companies',
-  'Live site proof points',
-  'Academy training team',
-  'Compliance dashboard',
-  'PostReady field briefing',
+  '51 rulebooks',
+  'One platform',
+  'Guard licensing rules change state by state',
+  'Guarding Companies',
+  'Higher Education',
+  'Casino',
+  '481 reviews',
+  '92% course completion',
+  'State-approved in every market',
+  'For Companies',
   'AcademyArchitect',
-  'Post Ready',
   'PostReady',
   'ProficiencyCheck',
-  '481 reviews',
-  '92% completion rate',
-  'Regulatory Intelligence',
-  'Lead magnet ladder',
-  'Production asset note',
-  'Do not generate new Defencify logos',
-  'brand identity in layout, color, typography, and approved logo assets only',
-  'Build handoff',
+  'Get your free state brief',
+  'Build a security team you can prove',
 ]) {
-  assert(b2b.includes(phrase), `b2b-website-wireframes.html must include client-grade B2B content: ${phrase}`);
+  assert(normalizedB2b.includes(phrase), `b2b-website-wireframes.html must include client-grade B2B content: ${phrase}`);
 }
 
 const modelCardCount = (growth.match(/<article class="model-output-card(?:\s|")/g) || []).length;
@@ -166,11 +165,13 @@ for (const asset of modelAssetRefs) {
 
 const b2bImageryAssets = manifest.b2bWireframes?.imageryAssets || [];
 assert(manifest.b2bWireframes?.file === 'b2b-website-wireframes.html', 'brandbook-manifest.json must list the B2B wireframe file');
-assert((manifest.b2bWireframes?.sections || []).includes('handoff'), 'brandbook-manifest.json must list the B2B handoff section');
+assert((manifest.b2bWireframes?.sections || []).includes('contact'), 'brandbook-manifest.json must list the B2B contact section');
 for (const asset of [
-  'assets/growth/gpt2-b2b-academy-training-team.png',
-  'assets/growth/gpt2-b2b-compliance-dashboard.png',
   'assets/growth/gpt2-b2b-postready-field-briefing.png',
+  'assets/growth/gpt2-security-incident-report.png',
+  'assets/growth/gpt2-b2b-vertical-guarding.png',
+  'assets/growth/gpt2-b2b-vertical-highered.png',
+  'assets/growth/gpt2-b2b-vertical-casino.png',
 ]) {
   assert(b2bImageryAssets.includes(asset), `brandbook-manifest.json missing B2B imagery asset: ${asset}`);
 }

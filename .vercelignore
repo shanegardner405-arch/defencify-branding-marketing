@@ -1,6 +1,3 @@
-.DS_Store
-node_modules/
-.vercel/
 qa-canonical/
 qa-canonical-live/
 qa-local/
@@ -10,4 +7,3 @@ qa-stress-*/
 qa-vercel*/
 *.png.json
 *.log
-.vercel

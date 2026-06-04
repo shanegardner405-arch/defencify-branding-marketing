@@ -116,18 +116,17 @@
     "file": "b2b-website-wireframes.html",
     "sections": [
       "overview",
-      "homepage",
+      "verticals",
       "solutions",
       "copilot",
-      "imagery",
-      "handoff"
+      "contact"
     ],
     "imageryAssets": [
-      "assets/growth/gpt2-security-front-desk.png",
       "assets/growth/gpt2-security-incident-report.png",
-      "assets/growth/gpt2-b2b-academy-training-team.png",
-      "assets/growth/gpt2-b2b-compliance-dashboard.png",
-      "assets/growth/gpt2-b2b-postready-field-briefing.png"
+      "assets/growth/gpt2-b2b-postready-field-briefing.png",
+      "assets/growth/gpt2-b2b-vertical-guarding.png",
+      "assets/growth/gpt2-b2b-vertical-highered.png",
+      "assets/growth/gpt2-b2b-vertical-casino.png"
     ]
   },
   "verification": [
