@@ -3283,3 +3283,37 @@ html {
 .df-mq__state::after { content:""; position:absolute; left:0; bottom:0; width:26px; height:3px; background: var(--df-y500); }
 .df-mq__hours { font-family: var(--df-font-display); font-size: 13px; font-weight: 700; letter-spacing:.3px; color: var(--df-b900); }
 .df-mq__agency { font-size: 12.5px; line-height: 1.45; color: var(--df-g700); }
+
+/* ============================================================
+   v11 (2026-06-04): Regulatory Co-Pilot product showcase +
+   real-UI screenshots (rounded frame) replacing the hand mock.
+   ============================================================ */
+.b2b-copilot-showcase { background: var(--df-white); }
+.b2b-wireframe-page #copilot { background: var(--df-surface); }
+
+.b2b-shot { max-width: 1000px; margin: 42px auto 0; }
+.b2b-shot--inline { margin: 0; max-width: none; }
+.b2b-shot__frame { border-radius: 12px; overflow: hidden; box-shadow: 0 16px 44px rgba(14,25,64,.12); background: var(--df-white); }
+.b2b-shot__bar { display: flex; gap: 7px; padding: 12px 16px; background: var(--df-surface); border-bottom: 1px solid var(--df-g200); }
+.b2b-shot__bar i { width: 11px; height: 11px; border-radius: 50%; background: var(--df-g400); }
+.b2b-shot__frame img { width: 100%; display: block; }
+
+.b2b-copilot-cta { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; margin-top: 32px; }
+.b2b-copilot-cta span { font-size: 13px; color: var(--df-g700); }
+.b2b-wireframe-page .bb-button--navy {
+  display: inline-flex; align-items: center; justify-content: center; padding: 15px 32px; border-radius: 999px;
+  background: var(--df-b900); color: #fff; border: 1.5px solid var(--df-b900); font-family: var(--df-font-display);
+  font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none;
+  transition: transform .15s ease, background .2s ease;
+}
+.b2b-wireframe-page .bb-button--navy:hover { transform: translateY(-2px); }
+
+/* chevron field continuity on the new section */
+#copilot-product { position: relative; }
+#copilot-product .growth-inner { position: relative; z-index: 1; }
+#copilot-product::before {
+  content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%230E1940' stroke-width='1.3'/%3E%3C/svg%3E");
+  background-size: 46px 46px; opacity: .04; animation: chevDrift 55s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) { #copilot-product::before { animation: none; } }
