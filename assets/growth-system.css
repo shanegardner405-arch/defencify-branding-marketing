@@ -3171,3 +3171,59 @@ html {
   color: var(--df-b900); font-size: inherit; font-family: inherit; font-weight: inherit;
   letter-spacing: inherit; text-transform: inherit; display: inline;
 }
+
+/* ============================================================
+   v9 (2026-06-04): two-row yellow-emphasis headers, auto-scroll
+   state marquee (all 34 covered states), and real card depth
+   (icon chips, tinted tiles, dividers, hover ring). Motion is
+   transform/opacity only and yields to prefers-reduced-motion.
+   ============================================================ */
+
+/* section-header emphasis: second row in brand yellow (white on the yellow close) */
+.growth-title .hl, .growth-h2 .hl { color: var(--df-y500); }
+.growth-title, .growth-h2 { line-height: 1.04; }
+.b2b-closing--yellow h2 .hl { color: var(--df-white); }
+
+/* ---- auto-scroll marquee: every state Defencify covers ---- */
+.df-marquee { margin: 46px 0 0; overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.df-marquee__track { display: flex; width: max-content; animation: dfMarquee 80s linear infinite; }
+.df-marquee:hover .df-marquee__track, .df-marquee:focus-within .df-marquee__track { animation-play-state: paused; }
+.df-marquee__set { display: flex; margin: 0; padding: 0; list-style: none; }
+@keyframes dfMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.df-mq__card { flex: 0 0 288px; margin-right: 18px; background: var(--df-white);
+  border: 1px solid var(--df-g200); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 9px; }
+.df-mq__state { font-family: var(--df-font-display); font-weight: 700; font-size: 22px; text-transform: uppercase;
+  letter-spacing: -.2px; color: var(--df-charcoal); position: relative; padding-bottom: 11px; }
+.df-mq__state::after { content:""; position:absolute; left:0; bottom:0; width:30px; height:3px; background: var(--df-y500); }
+.df-mq__hours { font-family: var(--df-font-display); font-size: 13px; font-weight: 700; letter-spacing:.3px; color: var(--df-b900); }
+.df-mq__agency { font-size: 13px; line-height: 1.45; color: var(--df-g700); }
+@media (prefers-reduced-motion: reduce) {
+  .df-marquee { overflow-x: auto; }
+  .df-marquee__track { animation: none; }
+  .df-marquee__set:last-child { display: none; }
+}
+
+/* ---- card depth: shared hover ring (transform/opacity only) ---- */
+.b2b-verticals article, .b2b-products article { position: relative; }
+.b2b-verticals article::after, .b2b-products article::after {
+  content:""; position:absolute; inset:0; border-radius: inherit; pointer-events:none;
+  border: 2px solid var(--df-y500); opacity:0; transform: scale(.985);
+  transition: opacity .3s ease, transform .3s cubic-bezier(.25,1,.5,1);
+}
+.b2b-verticals article:hover::after, .b2b-products article:hover::after { opacity:1; transform: scale(1); }
+
+/* verticals: photo media + overlapping icon chip + divider */
+.b2b-vmedia { position: relative; }
+.b2b-vchip { position:absolute; left:20px; bottom:-22px; width:48px; height:48px; border-radius:12px;
+  background: var(--df-white); display:grid; place-items:center; box-shadow: 0 6px 16px rgba(14,25,64,.12); }
+.b2b-vchip img { width:24px; height:24px; }
+.b2b-verticals h3 { padding-top: 34px; }
+.b2b-carddiv { display:block; height:1px; background: var(--df-g200); }
+.b2b-verticals .b2b-carddiv { margin: 6px 26px 2px; }
+
+/* products: tinted icon tile + divider */
+.b2b-ptile { width:54px; height:54px; border-radius:14px; background: var(--df-y100); display:grid; place-items:center; }
+.b2b-ptile img { width:26px; height:26px; }
+.b2b-products .b2b-carddiv { margin: 6px 0 2px; }
