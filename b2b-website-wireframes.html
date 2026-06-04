@@ -62,15 +62,27 @@
 
   <!-- ENTERPRISE PROOF band: the government-sourcing moat + named clients -->
   <section class="b2b-proofband" aria-label="Proof">
-    <div class="b2b-proofband__grid" aria-hidden="true"></div>
     <div class="b2b-proofband__inner" data-reveal>
-      <img class="b2b-proofband__logo" src="assets/logo-defencify-on-dark.svg" alt="Defencify" />
-      <p class="b2b-proofband__moat">Every requirement comes <b>directly from the state licensing boards across all 51 jurisdictions</b>, updated daily. Never third-party,&nbsp;never&nbsp;guesswork.</p>
-      <div class="b2b-proofband__clients">
-        <span>Trusted by multi-state teams</span>
-        <div><b>DSI</b><b>PalAmerican</b><b>+ teams since 2017</b></div>
-        <div class="b2b-proofband__stats"><span>481 reviews</span><span>92% course completion</span><span>State-approved in every market</span></div>
+      <div class="b2b-proofband__lead">
+        <img class="b2b-proofband__logo" src="assets/logo-defencify-on-dark.svg" alt="Defencify" />
+        <p class="b2b-proofband__moat">Every requirement comes <b>directly from the state licensing boards across all 51 jurisdictions</b>, updated daily. Never third-party,&nbsp;never&nbsp;guesswork.</p>
+        <div class="b2b-proofband__clients">
+          <span>Trusted by multi-state teams</span>
+          <div><b>DSI</b><b>PalAmerican</b><b>+ teams since 2017</b></div>
+        </div>
       </div>
+      <aside class="b2b-coverage" aria-label="Coverage across all 51 jurisdictions">
+        <div class="b2b-coverage__head">
+          <b data-count="51">51</b>
+          <span>jurisdictions live<br />updated daily from the source</span>
+        </div>
+        <div class="b2b-stategrid" data-cells="51" aria-hidden="true"></div>
+        <div class="b2b-coverage__stats">
+          <div><b data-count="481">481</b><span>verified reviews</span></div>
+          <div><b data-count="92" data-suffix="%">92%</b><span>course completion</span></div>
+        </div>
+        <span class="b2b-live b2b-live--dark"><i aria-hidden="true"></i>State-approved in every market</span>
+      </aside>
     </div>
   </section>
 
@@ -242,14 +254,49 @@
 <script>
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // build the living 51-jurisdiction grid (9 cols, diagonal wave, scattered "covered" cells)
+  var grid = document.querySelector('.b2b-stategrid');
+  if (grid) {
+    var n = parseInt(grid.getAttribute('data-cells') || '51', 10), cols = 9;
+    var on = {4:1,11:1,19:1,26:1,33:1,41:1,48:1}; // scattered yellow cells
+    for (var k = 0; k < n; k++) {
+      var cell = document.createElement('i');
+      var row = Math.floor(k / cols), col = k % cols;
+      cell.style.setProperty('--c', row + col);
+      if (on[k]) cell.className = 'is-on';
+      grid.appendChild(cell);
+    }
+  }
+
+  // count-up (rAF, ease-out, first view only)
+  function countUp(el) {
+    var target = parseFloat(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (reduce || isNaN(target)) { el.textContent = target + suffix; return; }
+    var dur = 1100, t0 = null;
+    function step(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
   var nodes = document.querySelectorAll('[data-reveal]');
+  function fire(target) {
+    target.classList.add('is-in');
+    target.querySelectorAll('[data-count]').forEach(countUp);
+  }
   if (reduce || !('IntersectionObserver' in window)) {
-    nodes.forEach(function (n) { n.classList.add('is-in'); });
+    nodes.forEach(fire);
     return;
   }
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      if (e.isIntersecting) { fire(e.target); io.unobserve(e.target); }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
   nodes.forEach(function (n) { io.observe(n); });
