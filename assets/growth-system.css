@@ -3209,7 +3209,7 @@ html {
 .b2b-verticals article, .b2b-products article { position: relative; }
 .b2b-verticals article::after, .b2b-products article::after {
   content:""; position:absolute; inset:0; border-radius: inherit; pointer-events:none;
-  border: 2px solid var(--df-y500); opacity:0; transform: scale(.985);
+  border: 1px solid var(--df-y500); opacity:0; transform: scale(.985);
   transition: opacity .3s ease, transform .3s cubic-bezier(.25,1,.5,1);
 }
 .b2b-verticals article:hover::after, .b2b-products article:hover::after { opacity:1; transform: scale(1); }
@@ -3562,7 +3562,7 @@ html {
 .df-mq__card.tone-bright .df-mq__wm, .df-mq__card.tone-light .df-mq__wm { color: var(--df-y500); }
 
 /* ---- yellow screenshot chrome (Defencify-branded "computer") ---- */
-.b2b-shot__frame { border: 2px solid var(--df-y500); box-shadow: 0 18px 46px rgba(252,175,50,.16); }
+.b2b-shot__frame { border: 1px solid var(--df-y500); box-shadow: 0 18px 46px rgba(252,175,50,.16); }
 .b2b-shot__bar { background: var(--df-y500); border-bottom: 1px solid #E79E1C; }
 .b2b-shot__bar i { background: rgba(14,25,64,.4); }
 /* caption + dark gradient at the bottom of each framed screenshot */
@@ -3576,7 +3576,7 @@ html {
 @property --ring-a { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
 .b2b-products article { position: relative; }
 .b2b-products article::after {
-  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 2px; z-index: 3; pointer-events: none;
+  content: ""; position: absolute; inset: 0; border-radius: inherit; border: 0; padding: 1px; z-index: 3; pointer-events: none;
   background: conic-gradient(from var(--ring-a), var(--df-y500), #C8CDD2 25%, var(--df-y500) 50%, #C8CDD2 75%, var(--df-y500));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude;
