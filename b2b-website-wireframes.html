@@ -61,28 +61,67 @@
   </header>
 
   <!-- ENTERPRISE PROOF band: the government-sourcing moat + named clients -->
-  <section class="b2b-proofband" aria-label="Proof">
-    <div class="b2b-proofband__inner" data-reveal>
-      <div class="b2b-proofband__lead">
-        <img class="b2b-proofband__logo" src="assets/logo-defencify-on-dark.svg" alt="Defencify" />
-        <p class="b2b-proofband__moat">Every requirement comes <b>directly from the state licensing boards across all 51 jurisdictions</b>, updated daily. Never third-party,&nbsp;never&nbsp;guesswork.</p>
-        <div class="b2b-proofband__clients">
+  <section class="b2b-proof" aria-label="Proof of sourcing">
+    <div class="growth-inner">
+      <header class="b2b-lead" data-reveal>
+        <span class="growth-eyebrow">Sourced from the boards</span>
+        <h2 class="growth-h2">Every requirement, traced to its <span>state board</span>.</h2>
+        <p>We track guard licensing in all 51 jurisdictions, straight from the source and updated daily. Never third-party, never guesswork.</p>
+      </header>
+
+      <div class="df-carousel" data-reveal data-autoplay="5500">
+        <div class="df-carousel__viewport">
+          <ul class="df-carousel__track" role="list">
+            <li class="df-carousel__slide" role="listitem">
+              <span class="df-slide__state">Florida</span>
+              <p class="df-slide__req">Class D security officer license renewal training.</p>
+              <span class="df-slide__src">Florida Dept. of Agriculture &middot; Division of Licensing</span>
+              <span class="b2b-live"><i aria-hidden="true"></i>Updated daily from the source</span>
+            </li>
+            <li class="df-carousel__slide" role="listitem">
+              <span class="df-slide__state">California</span>
+              <p class="df-slide__req">Guard Card registration and annual continuing education.</p>
+              <span class="df-slide__src">Bureau of Security &amp; Investigative Services (BSIS)</span>
+              <span class="b2b-live"><i aria-hidden="true"></i>Updated daily from the source</span>
+            </li>
+            <li class="df-carousel__slide" role="listitem">
+              <span class="df-slide__state">Texas</span>
+              <p class="df-slide__req">Level II non-commissioned security officer training.</p>
+              <span class="df-slide__src">Texas DPS &middot; Private Security Bureau</span>
+              <span class="b2b-live"><i aria-hidden="true"></i>Updated daily from the source</span>
+            </li>
+            <li class="df-carousel__slide" role="listitem">
+              <span class="df-slide__state">New York</span>
+              <p class="df-slide__req">8-hour pre-assignment and annual in-service training.</p>
+              <span class="df-slide__src">NY Dept. of State &middot; Division of Licensing Services</span>
+              <span class="b2b-live"><i aria-hidden="true"></i>Updated daily from the source</span>
+            </li>
+            <li class="df-carousel__slide" role="listitem">
+              <span class="df-slide__state">Illinois</span>
+              <p class="df-slide__req">PERC card application and 20-hour basic training.</p>
+              <span class="df-slide__src">Illinois Dept. of Financial &amp; Professional Regulation</span>
+              <span class="b2b-live"><i aria-hidden="true"></i>Updated daily from the source</span>
+            </li>
+          </ul>
+        </div>
+        <div class="df-carousel__controls">
+          <button class="df-carousel__nav" data-dir="-1" aria-label="Previous state" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="df-carousel__dots" role="tablist" aria-label="States"></div>
+          <button class="df-carousel__nav" data-dir="1" aria-label="Next state" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+
+      <div class="b2b-proof__strip" data-reveal>
+        <div class="b2b-proof__clients">
           <span>Trusted by multi-state teams</span>
           <div><b>DSI</b><b>PalAmerican</b><b>+ teams since 2017</b></div>
         </div>
-      </div>
-      <aside class="b2b-coverage" aria-label="Coverage across all 51 jurisdictions">
-        <div class="b2b-coverage__head">
-          <b data-count="51">51</b>
-          <span>jurisdictions live<br />updated daily from the source</span>
-        </div>
-        <div class="b2b-stategrid" data-cells="51" aria-hidden="true"></div>
-        <div class="b2b-coverage__stats">
+        <div class="b2b-proof__stats">
           <div><b data-count="481">481</b><span>verified reviews</span></div>
           <div><b data-count="92" data-suffix="%">92%</b><span>course completion</span></div>
+          <div><b>51</b><span>jurisdictions covered</span></div>
         </div>
-        <span class="b2b-live b2b-live--dark"><i aria-hidden="true"></i>State-approved in every market</span>
-      </aside>
+      </div>
     </div>
   </section>
 
@@ -228,15 +267,14 @@
   <div class="b2b-flow" aria-hidden="true"><span></span></div>
 
   <!-- CONTACT: dual path, trial primary, talk secondary -->
-  <section class="b2b-closing" id="contact">
+  <section class="b2b-closing b2b-closing--yellow" id="contact">
     <div class="b2b-closing__inner" data-reveal>
-      <img class="b2b-closing__logo" src="assets/logo-defencify-on-dark.svg" alt="Defencify" />
       <span>Ready when you are</span>
-      <h2>Build a security team you can prove</h2>
-      <p>Start free with a state brief, or map your full training and compliance path with us on one call. Either way, you talk to people who&nbsp;know&nbsp;your&nbsp;rules.</p>
+      <h2>Build a security team you can <span>prove</span></h2>
+      <p>Start free with a state brief, or map your full training and compliance path with us on one call.</p>
       <div class="b2b-closing__cluster">
-        <a class="b2b-cta-primary" href="#copilot">Start your free trial</a>
-        <a class="b2b-cta-secondary" href="#contact">Talk to our team</a>
+        <a class="bb-button bb-button--navy" href="#copilot">Start your free trial</a>
+        <a class="bb-button bb-button--ghost-on-yellow" href="#contact">Talk to our team</a>
       </div>
       <p class="b2b-trialnote">7-day free trial. No credit card.</p>
     </div>
@@ -284,6 +322,47 @@
     }
     requestAnimationFrame(step);
   }
+
+  // per-state sourcing carousel: dots, prev/next, scroll-sync, gentle autoplay
+  document.querySelectorAll('.df-carousel').forEach(function (car) {
+    var track = car.querySelector('.df-carousel__track');
+    var slides = Array.prototype.slice.call(car.querySelectorAll('.df-carousel__slide'));
+    var dotsWrap = car.querySelector('.df-carousel__dots');
+    var navs = car.querySelectorAll('.df-carousel__nav');
+    if (!track || !slides.length) return;
+    var idx = 0, timer = null;
+    slides.forEach(function (sl, i) {
+      var d = document.createElement('button');
+      d.type = 'button'; d.setAttribute('role', 'tab'); d.setAttribute('aria-label', 'State ' + (i + 1));
+      d.addEventListener('click', function () { go(i, true); });
+      dotsWrap.appendChild(d);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+    function setActive(i) { idx = i; dots.forEach(function (d, j) { d.setAttribute('aria-selected', j === i ? 'true' : 'false'); }); }
+    function go(i, user) {
+      i = (i + slides.length) % slides.length;
+      track.scrollTo({ left: slides[i].offsetLeft - track.offsetLeft, behavior: reduce ? 'auto' : 'smooth' });
+      setActive(i); if (user) restart();
+    }
+    navs.forEach(function (b) { b.addEventListener('click', function () { go(idx + parseInt(b.getAttribute('data-dir'), 10), true); }); });
+    var st;
+    track.addEventListener('scroll', function () {
+      clearTimeout(st);
+      st = setTimeout(function () {
+        var nearest = 0, min = Infinity;
+        slides.forEach(function (sl, i) { var d = Math.abs(sl.offsetLeft - track.offsetLeft - track.scrollLeft); if (d < min) { min = d; nearest = i; } });
+        setActive(nearest);
+      }, 90);
+    }, { passive: true });
+    setActive(0);
+    var auto = parseInt(car.getAttribute('data-autoplay') || '0', 10);
+    function start() { if (auto && !reduce && !timer) timer = setInterval(function () { go(idx + 1); }, auto); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function restart() { stop(); start(); }
+    ['mouseenter', 'focusin', 'pointerdown'].forEach(function (e) { car.addEventListener(e, stop); });
+    ['mouseleave', 'focusout'].forEach(function (e) { car.addEventListener(e, start); });
+    start();
+  });
 
   var nodes = document.querySelectorAll('[data-reveal]');
   function fire(target) {
