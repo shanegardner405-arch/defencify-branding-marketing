@@ -2829,3 +2829,69 @@ html {
   .b2b-feature { gap: 32px; }
   .b2b-v3 .growth-inner { padding: 64px 0; }
 }
+
+/* ================================================================
+   B2B wireframe v4 -- 2026-06-03 (persona stress-test fixes)
+   John/Adam/Somze critique: v3 was clean but under-substantiated.
+   Add enterprise proof + verticals + one conversion journey, keep
+   the clean guided flow. Substance back, boxiness stays gone.
+   ================================================================ */
+
+/* enterprise proof band: government-sourcing moat + named clients */
+.b2b-proofband { background: var(--df-b900); color: var(--df-white); padding: 40px 56px; }
+.b2b-proofband__inner { width: min(1180px, 100%); margin: 0 auto; display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); gap: 48px; align-items: center; }
+.b2b-proofband__moat { font-size: 19px; line-height: 1.5; color: var(--df-white); }
+.b2b-proofband__moat b { color: var(--df-y500); }
+.b2b-proofband__clients { display: flex; flex-direction: column; gap: 10px; }
+.b2b-proofband__clients span { font-family: var(--df-font-display); font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+.b2b-proofband__clients div { display: flex; flex-wrap: wrap; gap: 10px 16px; }
+.b2b-proofband__clients b { font-family: var(--df-font-display); font-size: 17px; font-weight: 700; text-transform: uppercase; color: var(--df-white); }
+.b2b-proofband__stats { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 6px; }
+.b2b-proofband__stats span { font-size: 13px; color: rgba(255,255,255,0.7); }
+
+/* verticals: built for your environment */
+.b2b-verticals { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
+.b2b-verticals article { padding: 30px 28px; border: 1px solid var(--df-g200); border-radius: 14px; background: var(--df-white); display: flex; flex-direction: column; gap: 10px; }
+.b2b-verticals article:hover { border-color: var(--df-y500); }
+.b2b-verticals img { width: 38px; height: 38px; }
+.b2b-verticals h3 { font-family: var(--df-font-display); font-size: 19px; font-weight: 700; text-transform: uppercase; color: var(--df-b900); }
+.b2b-verticals p { font-size: 14px; line-height: 1.55; color: var(--df-g700); }
+
+/* product throughline: hire -> train -> deploy -> prove */
+.b2b-chain { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 14px; margin: 38px auto 0; }
+.b2b-chain span { font-family: var(--df-font-display); font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--df-b900); }
+.b2b-chain i { width: 12px; height: 12px; border-right: 2px solid var(--df-y500); border-top: 2px solid var(--df-y500); transform: rotate(45deg); }
+
+/* secondary "or talk to us" microcopy under primary CTAs */
+.b2b-cta-secondary { font-family: var(--df-font-display); font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--df-b900); text-decoration: none; border-bottom: 2px solid var(--df-y500); padding-bottom: 2px; }
+.b2b-cta-secondary:hover { color: var(--df-y700); }
+.b2b-trialnote { margin-top: 12px; font-size: 13px; color: var(--df-g700); }
+.b2b-closing .b2b-trialnote { color: rgba(255,255,255,0.7); }
+.b2b-closing__cluster { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 18px 24px; margin-top: 34px; }
+.b2b-closing .b2b-cta-secondary { color: var(--df-white); }
+
+/* mobile: sticky conversion bar so the one action is always one tap away */
+.b2b-mobilecta { display: none; }
+@media (max-width: 760px) {
+  .b2b-mobilecta {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
+    gap: 10px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);
+    border-top: 1px solid var(--df-g200);
+  }
+  .b2b-mobilecta a { flex: 1; justify-content: center; min-height: 46px; }
+  .b2b-mobilecta .b2b-cta-ghost { flex: 0 0 auto; border: 1px solid var(--df-b900); background: var(--df-white); color: var(--df-b900) !important; }
+  body { padding-bottom: 76px; }
+}
+@media (max-width: 980px) {
+  .b2b-proofband__inner, .b2b-verticals { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* v4: on mobile (the QR/ad landing) strip the brandbook viewer chrome so the
+   first screen is the website itself -- logo, headline, proof, one action.
+   Desktop keeps the brandbook shell; the live site John builds has neither. */
+@media (max-width: 760px) {
+  .b2b-wireframe-page .bb-top-nav,
+  .b2b-wireframe-page .bb-left-toc { display: none; }
+  .b2b-wireframe-page .b2b-jumpnav { display: none; }
+}
