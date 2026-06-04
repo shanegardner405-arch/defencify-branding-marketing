@@ -3276,7 +3276,7 @@ html {
 .df-mq__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .df-mq__body { padding: 17px 20px 20px; display: flex; flex-direction: column; gap: 7px; }
 .df-mq__course { display: inline-flex; align-items: center; gap: 6px; font-family: var(--df-font-display);
-  font-size: 11px; font-weight: 700; letter-spacing: .9px; text-transform: uppercase; color: var(--df-charcoal); }
+  font-size: 12px; font-weight: 700; letter-spacing: .9px; text-transform: uppercase; color: var(--df-charcoal); }
 .df-mq__course svg { width: 11px; height: 11px; color: var(--df-y500); }
 .df-mq__state { font-family: var(--df-font-display); font-weight: 700; font-size: 20px; text-transform: uppercase;
   letter-spacing: -.2px; color: var(--df-charcoal); position: relative; padding-bottom: 9px; }
