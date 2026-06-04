@@ -3603,3 +3603,9 @@ html {
 
 /* closing gloss must be inline-block so overflow clips the sweep (no freeze) */
 .b2b-closing--yellow h2 .hl.gloss { display: inline-block; }
+
+/* v19.1 fix: my v18 hero grid override also applied on mobile and crushed the
+   copy column (title wrapped one char per line). Restore the mobile stack. */
+@media (max-width: 760px) {
+  .b2b-wireframe-page .b2b-hero { grid-template-columns: 1fr; padding-right: 24px; gap: 24px; }
+}
