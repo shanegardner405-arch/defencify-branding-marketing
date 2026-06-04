@@ -3334,3 +3334,24 @@ html {
 .b2b-gallery figure:hover .b2b-shot__frame { transform: translateY(-5px); }
 .b2b-gallery figcaption { margin-top: 13px; font-family: var(--df-font-display); font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--df-charcoal); text-align: center; }
 @media (max-width: 880px) { .b2b-copilot-feats, .b2b-gallery { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   v13 (2026-06-04): co-pilot screen walkthrough -- big alternating
+   image + explainer-cards rows (image L / cards R, mirrored, repeat).
+   ============================================================ */
+.b2b-showrows { max-width: 1180px; margin: 50px auto 0; display: flex; flex-direction: column; gap: 56px; }
+.b2b-showrow { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; }
+.b2b-showrow--rev .b2b-showrow__media { order: 2; }
+.b2b-showrow__cards { display: flex; flex-direction: column; gap: 16px; }
+.b2b-showrow__cards .growth-eyebrow { margin-bottom: 2px; }
+.b2b-showcard { padding: 24px 26px; border: 1px solid var(--df-g200); border-radius: 14px; background: var(--df-white); transition: transform .3s cubic-bezier(.25,1,.5,1), border-color .3s ease; }
+.b2b-showcard:hover { transform: translateY(-4px); border-color: var(--df-y500); }
+.b2b-showcard h4 { font-family: var(--df-font-display); font-weight: 700; font-size: 17px; text-transform: uppercase; letter-spacing: .2px; color: var(--df-charcoal); margin: 0 0 7px; }
+.b2b-showcard p { font-size: 14px; line-height: 1.55; color: var(--df-g700); margin: 0; }
+.b2b-statechips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+.b2b-statechips span { display: inline-flex; align-items: center; gap: 7px; font-family: var(--df-font-display); font-size: 12px; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; color: var(--df-charcoal); background: var(--df-surface); border: 1px solid var(--df-g200); border-radius: 999px; padding: 7px 13px; }
+.b2b-statechips span::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--df-y500); }
+@media (max-width: 880px) {
+  .b2b-showrow { grid-template-columns: 1fr; gap: 22px; }
+  .b2b-showrow--rev .b2b-showrow__media { order: 0; }
+}
