@@ -3268,3 +3268,18 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .b2b-hero::before, .b2b-proof::before, #verticals::before, #solutions::before, #copilot::before { animation: none; }
 }
+
+/* v10.1: marquee cards now lead with a course illustration */
+.df-mq__card { flex: 0 0 268px; margin-right: 18px; padding: 0; overflow: hidden;
+  border: 1px solid var(--df-g200); border-radius: 14px; background: var(--df-white); display: flex; flex-direction: column; gap: 0; }
+.df-mq__media { aspect-ratio: 16 / 10; overflow: hidden; background: var(--df-surface); }
+.df-mq__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.df-mq__body { padding: 17px 20px 20px; display: flex; flex-direction: column; gap: 7px; }
+.df-mq__course { display: inline-flex; align-items: center; gap: 6px; font-family: var(--df-font-display);
+  font-size: 11px; font-weight: 700; letter-spacing: .9px; text-transform: uppercase; color: var(--df-charcoal); }
+.df-mq__course svg { width: 11px; height: 11px; color: var(--df-y500); }
+.df-mq__state { font-family: var(--df-font-display); font-weight: 700; font-size: 20px; text-transform: uppercase;
+  letter-spacing: -.2px; color: var(--df-charcoal); position: relative; padding-bottom: 9px; }
+.df-mq__state::after { content:""; position:absolute; left:0; bottom:0; width:26px; height:3px; background: var(--df-y500); }
+.df-mq__hours { font-family: var(--df-font-display); font-size: 13px; font-weight: 700; letter-spacing:.3px; color: var(--df-b900); }
+.df-mq__agency { font-size: 12.5px; line-height: 1.45; color: var(--df-g700); }
