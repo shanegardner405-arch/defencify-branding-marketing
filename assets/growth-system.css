@@ -2895,3 +2895,36 @@ html {
   .b2b-wireframe-page .bb-left-toc { display: none; }
   .b2b-wireframe-page .b2b-jumpnav { display: none; }
 }
+
+/* ---- v5: Shane review (2026-06-03): restore hero caption, kill widow words,
+   photoreal vertical cards (Guarding first), more Defencify logo cohesion ---- */
+
+/* widow guard: no line in these blocks may end as a single orphan word.
+   balance evens line lengths; the &nbsp; bindings in markup hold the tails. */
+.b2b-hero .growth-lede,
+.b2b-proofband__moat,
+.b2b-hero__proof span { text-wrap: balance; }
+
+/* hero caption sits a touch higher so the new copy clears the image edge */
+.b2b-hero__proof span { text-wrap: balance; }
+
+/* verticals: photo-led cards, image bleeds to the card edges */
+.b2b-verticals article { padding: 0; gap: 0; overflow: hidden; }
+.b2b-verticals .b2b-vimg { width: 100%; height: 176px; object-fit: cover; object-position: center 30%; display: block; }
+.b2b-verticals h3 { padding: 22px 26px 0; }
+.b2b-verticals p { padding: 8px 26px 26px; }
+
+/* Defencify logo cohesion on the two navy bands */
+.b2b-proofband__logo { grid-column: 1 / -1; height: 30px; width: auto; opacity: 0.96; }
+.b2b-closing__logo { display: block; height: 34px; width: auto; margin: 0 auto 20px; }
+
+@media (max-width: 760px) {
+  .b2b-verticals .b2b-vimg { height: 188px; }
+}
+
+/* v5.1: widow guard extended to the remaining wireframe body copy */
+.b2b-closing p,
+.b2b-lead p,
+.b2b-verticals p,
+.b2b-capture p,
+.b2b-regintel .copilot-answer { text-wrap: balance; }
