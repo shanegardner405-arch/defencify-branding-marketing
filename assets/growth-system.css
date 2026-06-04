@@ -3450,3 +3450,56 @@ html {
 .b2b-products article.is-orange .b2b-ptile { background: rgba(14,25,64,.1); border-color: rgba(14,25,64,.2); }
 .b2b-products article.is-orange a { color: var(--df-b900); }
 .b2b-copilot-feats article.is-orange img { filter: none; }
+
+/* ============================================================
+   v16 (2026-06-04): orange GRADATION tone system (white ->
+   light orange -> bright orange). Whole-set theming only, never
+   white-straight-to-bright. + co-pilot section bg + orange capture.
+   ============================================================ */
+:root { --df-y300: #FCD37A; }
+
+/* tone backgrounds (scoped high enough to beat per-card base bg) */
+.df-mq__card.tone-light, .b2b-verticals article.tone-light, .b2b-showcard.tone-light, .b2b-capture.tone-light { background: var(--df-y300); border-color: #F1C158; }
+.df-mq__card.tone-bright, .b2b-verticals article.tone-bright, .b2b-showcard.tone-bright, .b2b-capture.tone-bright { background: var(--df-y500); border-color: var(--df-y500); }
+
+/* marquee tone text + watermark */
+.df-mq__card.tone-light .df-mq__wm { color: var(--df-y700); opacity: .24; }
+.df-mq__card.tone-light .df-mq__course, .df-mq__card.tone-light .df-mq__state, .df-mq__card.tone-light .df-mq__hours { color: var(--df-charcoal); }
+.df-mq__card.tone-light .df-mq__course svg { color: var(--df-y700); }
+.df-mq__card.tone-light .df-mq__agency { color: var(--df-g700); }
+.df-mq__card.tone-bright .df-mq__wm { color: var(--df-b900); opacity: .2; }
+.df-mq__card.tone-bright .df-mq__course, .df-mq__card.tone-bright .df-mq__state, .df-mq__card.tone-bright .df-mq__hours { color: var(--df-b900); }
+.df-mq__card.tone-bright .df-mq__course svg { color: var(--df-b900); }
+.df-mq__card.tone-bright .df-mq__agency { color: rgba(14,25,64,.74); }
+.df-mq__card.tone-bright .df-mq__media { background: rgba(14,25,64,.06); }
+
+/* showcards (jobs + co-pilot rows) */
+.b2b-showcard.tone-light h4 { color: var(--df-charcoal); }
+.b2b-showcard.tone-light p { color: var(--df-g700); }
+.b2b-showcard.tone-bright h4 { color: var(--df-b900); }
+.b2b-showcard.tone-bright p { color: rgba(14,25,64,.84); }
+.b2b-showcard.tone-light:hover, .b2b-showcard.tone-bright:hover { border-color: var(--df-b900); }
+.b2b-showcard.tone-bright .b2b-statechips span { background: rgba(255,255,255,.6); border-color: rgba(14,25,64,.16); color: var(--df-b900); }
+.b2b-showcard.tone-bright .b2b-statechips span::before { background: var(--df-b900); }
+
+/* verticals tone cards */
+.b2b-verticals article.tone-light h3, .b2b-verticals article.tone-bright h3 { color: var(--df-b900); }
+.b2b-verticals article.tone-light p { color: var(--df-g700); }
+.b2b-verticals article.tone-bright p { color: rgba(14,25,64,.84); }
+.b2b-verticals article.tone-light .b2b-carddiv { background: rgba(0,0,0,.14); }
+.b2b-verticals article.tone-bright .b2b-carddiv { background: rgba(14,25,64,.2); }
+.b2b-verticals article.tone-light .b2b-vcta, .b2b-verticals article.tone-bright .b2b-vcta { color: var(--df-b900); border-color: var(--df-b900); }
+.b2b-verticals article.tone-light .b2b-vcta span, .b2b-verticals article.tone-bright .b2b-vcta span { color: var(--df-b900); }
+.b2b-verticals article.tone-light .b2b-vcta:hover, .b2b-verticals article.tone-bright .b2b-vcta:hover { background: var(--df-b900); color: #fff; }
+.b2b-verticals article.tone-light::after, .b2b-verticals article.tone-bright::after { border-color: var(--df-b900); }
+
+/* co-pilot section: a distinct surface so it reads as its own zone */
+.b2b-copilot-showcase { background: var(--df-surface); }
+
+/* state-brief capture card: bright orange, logo on a white inset (never logo on orange) */
+.b2b-capture.tone-bright h3 { color: var(--df-b900); }
+.b2b-capture.tone-bright > p { color: rgba(14,25,64,.84); }
+.b2b-capture.tone-bright .field { background: var(--df-white); color: var(--df-g700); border-color: rgba(14,25,64,.12); }
+.b2b-capture.tone-bright .b2b-trialnote { color: rgba(14,25,64,.72); }
+.b2b-capture__logobox { display: inline-flex; background: var(--df-white); padding: 10px 14px; border-radius: 10px; margin-bottom: 16px; }
+.b2b-capture__logobox .b2b-capture__logo { width: 132px; margin: 0; display: block; }
