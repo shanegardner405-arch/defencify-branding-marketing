@@ -3227,3 +3227,44 @@ html {
 .b2b-ptile { width:54px; height:54px; border-radius:14px; background: var(--df-y100); display:grid; place-items:center; }
 .b2b-ptile img { width:26px; height:26px; }
 .b2b-products .b2b-carddiv { margin: 6px 0 2px; }
+
+/* ============================================================
+   v10 (2026-06-04): hero balance (2-line head, bigger logo,
+   image pulled in), slower left-to-right state marquee, roomier
+   vertical cards, neutral product tiles, state-brief logo, and a
+   subtle animated Defencify chevron-field on the sections.
+   ============================================================ */
+
+/* hero: headline two lines max, larger logo, tighter image gap */
+.b2b-wireframe-page .growth-title { font-size: clamp(38px, 4.1vw, 54px); max-width: none; line-height: 1.02; }
+.b2b-wireframe-page .growth-title .hl { white-space: nowrap; }
+.b2b-wireframe-page .b2b-logo { width: 280px; margin-bottom: 30px; }
+.b2b-wireframe-page .b2b-hero { gap: 30px; grid-template-columns: minmax(0,1fr) minmax(330px, 0.6fr); padding-right: 64px; }
+.b2b-wireframe-page .b2b-hero__media { min-height: 480px; }
+
+/* marquee: slower + left-to-right */
+.df-marquee__track { animation: dfMarquee 108s linear infinite reverse; }
+
+/* verticals: guaranteed space between divider and button + roomier card */
+.b2b-verticals p { flex: 1 1 auto; padding: 8px 26px 16px; }
+.b2b-verticals .b2b-carddiv { margin: 0 26px; }
+.b2b-vcta { margin: 18px 26px 28px; }
+
+/* products: neutral icon tile (drop the yellow tint Shane flagged) */
+.b2b-ptile { background: var(--df-white); border: 1px solid var(--df-g200); }
+
+/* state-brief card: Defencify logo so the buyer knows who they are working with */
+.b2b-capture__logo { width: 150px; height: auto; display: block; margin: 0 0 16px; }
+
+/* ---- subtle animated Defencify chevron field on sections ---- */
+.b2b-hero, .b2b-proof, #verticals, #solutions, #copilot { position: relative; }
+.b2b-hero::before, .b2b-proof::before, #verticals::before, #solutions::before, #copilot::before {
+  content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%230E1940' stroke-width='1.3'/%3E%3C/svg%3E");
+  background-size: 46px 46px; opacity: .04; animation: chevDrift 55s linear infinite;
+}
+.b2b-hero__copy, .b2b-hero__media, .b2b-proof .growth-inner, #verticals .growth-inner, #solutions .growth-inner, #copilot .growth-inner { position: relative; z-index: 1; }
+@keyframes chevDrift { from { background-position: 0 0; } to { background-position: 46px 46px; } }
+@media (prefers-reduced-motion: reduce) {
+  .b2b-hero::before, .b2b-proof::before, #verticals::before, #solutions::before, #copilot::before { animation: none; }
+}
