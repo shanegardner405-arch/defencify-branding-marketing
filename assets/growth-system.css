@@ -3716,3 +3716,19 @@ html {
 
 .b2b-products--three { grid-template-columns: repeat(3, minmax(0,1fr)); }
 @media (max-width: 760px) { .b2b-products--three { grid-template-columns: 1fr; } }
+
+/* ===== Unit 7: pricing/plans page ===== */
+.b2b-draftbar { background: var(--df-b900); color: #fff; font-size: 12.5px; letter-spacing: .2px; text-align: center; padding: 9px 24px; }
+.b2b-hero--short { min-height: auto; grid-template-columns: 1fr; padding-top: 56px; padding-bottom: 48px; }
+.b2b-hero--short .b2b-hero__copy { max-width: 760px; }
+.b2b-pricing-grid article { display: flex; flex-direction: column; padding: 30px 28px; }
+.b2b-plan--featured { border-color: var(--df-y500); box-shadow: 0 12px 34px rgba(252,175,50,.16); }
+.b2b-plan-eyebrow { font-family: var(--df-font-display); font-weight: 700; font-size: 13px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--df-y700); }
+.b2b-plan-price { margin: 10px 0 16px; display: flex; flex-direction: column; }
+.b2b-plan-price b { font-family: var(--df-font-display); font-weight: 700; font-size: 24px; color: var(--df-b900); text-transform: uppercase; }
+.b2b-plan-price span { font-size: 12.5px; color: var(--df-g700); margin-top: 2px; }
+.b2b-plan-list { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+.b2b-plan-list li { position: relative; padding-left: 22px; font-size: 14px; color: var(--df-g700); line-height: 1.45; }
+.b2b-plan-list li::before { content: ""; position: absolute; left: 0; top: 7px; width: 10px; height: 10px; border-radius: 3px; background: var(--df-y500); }
+.b2b-pricing-grid .b2b-vcta { margin-top: auto; }
+@media (max-width: 760px) { .b2b-hero--short { padding: 36px 20px; } }
