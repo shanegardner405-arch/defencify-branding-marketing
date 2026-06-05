@@ -3671,3 +3671,27 @@ html {
   .b2b-stats { gap: 18px 30px; }
   .b2b-stats strong { font-size: 34px; }
 }
+
+/* ===== Unit 4: elevated state-brief band (Adam: prominent, not buried) ===== */
+.b2b-briefband { background: linear-gradient(180deg, #FFF8EC 0%, #FFF3DD 100%); padding: 56px; border-top: 1px solid var(--df-y100); border-bottom: 1px solid var(--df-y100); }
+.b2b-briefband__inner { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(300px,0.9fr); gap: 48px; align-items: center; }
+.b2b-briefband__copy .growth-h2 { margin-top: 8px; }
+.b2b-briefband__copy p { margin-top: 14px; max-width: 46ch; color: var(--df-g700); }
+.b2b-briefband__form { background: #FFFFFF; border: 1px solid var(--df-g200); border-radius: 14px; padding: 26px; box-shadow: 0 1px 0 rgba(14,25,64,.04); }
+.b2b-briefband__form .field { display: block; border: 1px solid var(--df-g200); border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; color: #9aa0a6; font-size: 14px; background: #FCFCFD; }
+.b2b-briefband__form .b2b-cta-primary { width: 100%; text-align: center; margin-top: 4px; }
+.b2b-briefband__form .b2b-trialnote { text-align: center; margin-top: 12px; }
+@media (max-width: 760px) {
+  .b2b-briefband { padding: 36px 20px; }
+  .b2b-briefband__inner { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* ===== Unit 4: co-pilot deep-link CTAs (Adam: "see how to accomplish X") ===== */
+.b2b-deeplinks { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 18px; }
+.b2b-deeplinks a {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 16px; border: 1px solid var(--df-y500); border-radius: 999px;
+  font-size: 13.5px; font-weight: 600; color: var(--df-b900); text-decoration: none;
+  background: var(--df-y100); transition: background .15s ease;
+}
+.b2b-deeplinks a:hover { background: var(--df-y500); }
