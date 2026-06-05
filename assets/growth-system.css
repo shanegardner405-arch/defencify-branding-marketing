@@ -3704,3 +3704,15 @@ html {
 .b2b-gated-note { display: block; margin-top: 10px; font-size: 11.5px; color: var(--df-g700); opacity: .8; font-style: italic; }
 @media (max-width: 980px) { .b2b-verticals--five { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 620px) { .b2b-verticals--five { grid-template-columns: 1fr; } }
+
+/* ===== Unit 6: Contract Security page ===== */
+.b2b-products--six { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.b2b-cs-trust { background: var(--df-surface); padding: 30px 56px; text-align: center; }
+.b2b-cs-trust__label { font-size: 12.5px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--df-g700); }
+.b2b-cs-trust__names { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 40px; margin-top: 14px; }
+.b2b-cs-trust__names b { font-family: var(--df-font-display); font-weight: 700; font-size: 22px; color: var(--df-b900); text-transform: uppercase; letter-spacing: .3px; }
+@media (max-width: 760px) { .b2b-cs-trust { padding: 24px 20px; } .b2b-cs-trust__names b { font-size: 18px; } .b2b-products--six { grid-template-columns: 1fr; } }
+@media (max-width: 980px) { .b2b-products--six { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+
+.b2b-products--three { grid-template-columns: repeat(3, minmax(0,1fr)); }
+@media (max-width: 760px) { .b2b-products--three { grid-template-columns: 1fr; } }
