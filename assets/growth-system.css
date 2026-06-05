@@ -3718,7 +3718,7 @@ html {
 @media (max-width: 760px) { .b2b-products--three { grid-template-columns: 1fr; } }
 
 /* ===== Unit 7: pricing/plans page ===== */
-.b2b-draftbar { background: var(--df-b900); color: #fff; font-size: 12.5px; letter-spacing: .2px; text-align: center; padding: 9px 24px; }
+.b2b-draftbar { background: #4F575C; color: #fff; font-size: 12.5px; letter-spacing: .2px; text-align: center; padding: 9px 24px; }
 .b2b-hero--short { min-height: auto; grid-template-columns: 1fr; padding-top: 56px; padding-bottom: 48px; }
 .b2b-hero--short .b2b-hero__copy { max-width: 760px; }
 .b2b-pricing-grid article { display: flex; flex-direction: column; padding: 30px 28px; }
