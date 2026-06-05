@@ -3695,3 +3695,12 @@ html {
   background: var(--df-y100); transition: background .15s ease;
 }
 .b2b-deeplinks a:hover { background: var(--df-y500); }
+
+/* ===== Unit 5: photoless vertical cards (imagery deferred to John) + gated note ===== */
+.b2b-verticals--five { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.b2b-vmedia--icon { height: 176px; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--df-y100) 0%, #FFFFFF 72%); }
+.b2b-vmedia--icon .b2b-vwm { width: 56px !important; height: 56px !important; opacity: .42; }
+.b2b-gated-note { display: block; margin-top: 10px; font-size: 11.5px; color: var(--df-g700); opacity: .8; font-style: italic; }
+@media (max-width: 980px) { .b2b-verticals--five { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 620px) { .b2b-verticals--five { grid-template-columns: 1fr; } }
