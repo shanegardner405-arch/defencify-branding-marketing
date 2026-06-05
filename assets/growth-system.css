@@ -3948,3 +3948,80 @@ html {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpolygon points='0,0 80,0 200,60 80,120 0,120 120,60' fill='%230E1940'/%3E%3C/svg%3E") no-repeat center / contain;
   opacity: .08;
 }
+
+/* ============================================================
+   v26 — Shane review + Codex controller-fusion (2026-06-05): give
+   the cards a real "security console" character, brand-true, not
+   faux-HUD. Three cues (Codex cap): (1) faint navy blueprint grid,
+   (2) corner reticle brackets (monitored-panel feel), (3) a chevron-
+   node divider rail under the title, + a restrained hover "lock-on".
+   No glow / neon / circuit traces. Marquee untouched.
+   ============================================================ */
+
+/* deeplink buttons centered under the Co-Pilot intro */
+.b2b-wireframe-page .b2b-deeplinks { justify-content: center; }
+
+/* console scope */
+.b2b-wireframe-page :is(#why .b2b-products article, #solutions .b2b-products article, #copilot-product .b2b-copilot-feats article, #jobs .b2b-showcard) { position: relative; overflow: hidden; }
+
+/* (1) blueprint grid — navy hairlines, very faint, over the solid card color */
+.b2b-wireframe-page :is(#why .b2b-products article, #jobs .b2b-showcard) {
+  background-color: var(--df-y500) !important;
+  background-image: linear-gradient(rgba(14,25,64,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(14,25,64,.06) 1px, transparent 1px) !important;
+  background-size: 20px 20px !important; background-position: -1px -1px !important;
+}
+.b2b-wireframe-page :is(#solutions .b2b-products article, #copilot-product .b2b-copilot-feats article) {
+  background-color: var(--df-white) !important;
+  background-image: linear-gradient(rgba(14,25,64,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(14,25,64,.05) 1px, transparent 1px) !important;
+  background-size: 20px 20px !important; background-position: -1px -1px !important;
+}
+
+/* (2) corner reticle brackets: ::before = top-left, ::after = bottom-right */
+.b2b-wireframe-page :is(#why .b2b-products article, #solutions .b2b-products article, #copilot-product .b2b-copilot-feats article, #jobs .b2b-showcard)::before {
+  display: block !important; content: ""; position: absolute; top: 12px; left: 12px; right: auto; bottom: auto;
+  width: 15px; height: 15px; z-index: 2; pointer-events: none; background: none !important; opacity: 1;
+  border-top: 2px solid var(--df-b900); border-left: 2px solid var(--df-b900);
+  -webkit-mask: none !important; mask: none !important; padding: 0 !important;
+  transition: top .25s ease, left .25s ease;
+}
+.b2b-wireframe-page :is(#why .b2b-products article, #solutions .b2b-products article, #copilot-product .b2b-copilot-feats article, #jobs .b2b-showcard)::after {
+  content: ""; position: absolute; right: 12px; bottom: 12px; left: auto; top: auto;
+  width: 15px; height: 15px; z-index: 2; pointer-events: none; background: none !important; opacity: 1; transform: none;
+  border-top: 0 !important; border-left: 0 !important;
+  border-bottom: 2px solid var(--df-b900); border-right: 2px solid var(--df-b900);
+  -webkit-mask: none !important; mask: none !important; padding: 0 !important;
+  transition: right .25s ease, bottom .25s ease;
+}
+/* hover: reticle "locks on" toward the corners + the existing lift */
+.b2b-wireframe-page :is(#why .b2b-products article, #solutions .b2b-products article, #copilot-product .b2b-copilot-feats article, #jobs .b2b-showcard):hover::before { top: 9px; left: 9px; }
+.b2b-wireframe-page :is(#why .b2b-products article, #solutions .b2b-products article, #copilot-product .b2b-copilot-feats article, #jobs .b2b-showcard):hover::after { right: 9px; bottom: 9px; }
+
+/* (3) chevron-node divider rail under the card title */
+.b2b-wireframe-page :is(#why .b2b-products article h3, #solutions .b2b-products article h3, #copilot-product .b2b-copilot-feats article h4, #jobs .b2b-showcard h4) {
+  position: relative; padding-bottom: 13px; margin-bottom: 3px;
+}
+.b2b-wireframe-page :is(#why .b2b-products article h3, #solutions .b2b-products article h3, #copilot-product .b2b-copilot-feats article h4, #jobs .b2b-showcard h4)::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: rgba(14,25,64,.20);
+}
+.b2b-wireframe-page :is(#why .b2b-products article h3, #solutions .b2b-products article h3, #copilot-product .b2b-copilot-feats article h4, #jobs .b2b-showcard h4)::before {
+  content: ""; position: absolute; left: 0; bottom: -3px; width: 11px; height: 8px; z-index: 1;
+  clip-path: polygon(0 0, 55% 0, 100% 50%, 55% 100%, 0 100%, 45% 50%);
+}
+/* node colour: navy on the orange cards, yellow on the white cards */
+.b2b-wireframe-page :is(#why .b2b-products article h3, #jobs .b2b-showcard h4)::before { background: var(--df-b900); }
+.b2b-wireframe-page :is(#solutions .b2b-products article h3, #copilot-product .b2b-copilot-feats article h4)::before { background: var(--df-y500); }
+
+/* v26.1 — mobile: the split "why" header must shrink to fit 390px */
+@media (max-width: 760px) {
+  .b2b-wireframe-page #why .b2b-lead--split .growth-h2 { font-size: 23px; line-height: 1.14; }
+  .b2b-wireframe-page #why .b2b-lead--split .growth-h2 .hl { white-space: normal; }
+}
+
+/* v26.2 — cohesion: give the photo cards (outcomes + verticals) the same
+   chevron-node divider so every card carries the brand decoration. */
+.b2b-wireframe-page :is(#outcomes .b2b-outcomes-grid, #verticals .b2b-verticals--five) article .b2b-carddiv { position: relative; height: 1px; }
+.b2b-wireframe-page :is(#outcomes .b2b-outcomes-grid, #verticals .b2b-verticals--five) article .b2b-carddiv::after {
+  content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  width: 11px; height: 8px; background: var(--df-b900);
+  clip-path: polygon(0 0, 55% 0, 100% 50%, 55% 100%, 0 100%, 45% 50%);
+}
