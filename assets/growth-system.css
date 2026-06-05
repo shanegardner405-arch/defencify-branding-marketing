@@ -3647,3 +3647,27 @@ html {
   .b2b-wireframe-page .b2b-hero__copy,
   .b2b-wireframe-page .b2b-hero__media { min-width: 0; }
 }
+
+/* ===== Unit 3: stat strip (John's approved homepage proof points) ===== */
+.b2b-statstrip { background: #4F575C; padding: 32px 56px; }
+.b2b-statstrip .growth-inner { padding: 0; }
+.b2b-stats {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+  gap: 16px 72px;
+}
+.b2b-stats li { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.b2b-stats strong {
+  font-family: var(--df-font-display); font-weight: 700;
+  font-size: 46px; line-height: 1; color: var(--df-y500);
+}
+.b2b-stats span {
+  margin-top: 8px; font-size: 12.5px; font-weight: 600;
+  letter-spacing: 1.6px; text-transform: uppercase; color: #FFFFFF; opacity: .9;
+}
+.b2b-outcomes-grid article p { margin-top: 8px; }
+@media (max-width: 760px) {
+  .b2b-statstrip { padding: 24px 20px; }
+  .b2b-stats { gap: 18px 30px; }
+  .b2b-stats strong { font-size: 34px; }
+}
