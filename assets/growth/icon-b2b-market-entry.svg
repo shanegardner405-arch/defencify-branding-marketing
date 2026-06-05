@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Market entry icon">
-  <path d="M9 35h30M14 35V16h9v19M25 35V10h9v25" fill="none" stroke="#B2B2B5" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M13 22h8M27 17h5M27 24h5" fill="none" stroke="#B2B2B5" stroke-width="3" stroke-linecap="round"/>
-  <path d="M34 11l7 7-7 7" fill="none" stroke="#FCAF32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="#FCAF32" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6.5h6a1.5 1.5 0 0 1 1.5 1.5v16a1.5 1.5 0 0 1-1.5 1.5h-6"/><path d="M6.5 16h11m-4.5-5l5 5-5 5"/></svg>

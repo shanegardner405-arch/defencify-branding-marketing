@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Compliance map icon">
-  <path d="M9 12l10-4 10 4 10-4v28l-10 4-10-4-10 4z" fill="none" stroke="#B2B2B5" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M19 8v28M29 12v28" fill="none" stroke="#B2B2B5" stroke-width="3"/>
-  <path d="M15 23l4 4 12-13" fill="none" stroke="#FCAF32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="#FCAF32" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l7-2.5 6 2.5 7-2.5v16l-7 2.5-6-2.5-7 2.5z"/><path d="M13 6.5v16M19 9v16"/></svg>

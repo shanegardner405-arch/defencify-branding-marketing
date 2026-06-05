@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="LMS dashboard icon">
-  <rect x="7" y="9" width="34" height="28" rx="2" fill="none" stroke="#B2B2B5" stroke-width="3"/>
-  <path d="M13 17h10M13 24h14M13 31h8" fill="none" stroke="#B2B2B5" stroke-width="3" stroke-linecap="round"/>
-  <path d="M31 30l7-9M31 21h7v9" fill="none" stroke="#FCAF32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="#FCAF32" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="6.5" width="21" height="19" rx="2.5"/><path d="M5.5 12h21"/><path d="M10 20.5l3.7-3.7 3 2.6 4.8-5.2"/></svg>

@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Branded academy icon">
-  <path d="M8 15l16-8 16 8-16 8z" fill="none" stroke="#B2B2B5" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M14 21v9c0 4 4 7 10 7s10-3 10-7v-9" fill="none" stroke="#B2B2B5" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M24 18v12M19 25h10" fill="none" stroke="#FCAF32" stroke-width="3" stroke-linecap="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="#FCAF32" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7l11 4.5-11 4.5-11-4.5z"/><path d="M9 14.5V20c0 1.7 3.1 3 7 3s7-1.3 7-3v-5.5"/><path d="M27 11.7v6.3"/></svg>

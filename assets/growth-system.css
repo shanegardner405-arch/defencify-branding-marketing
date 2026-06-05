@@ -3857,3 +3857,46 @@ html {
 .b2b-wireframe-page .b2b-verticals--five > article { flex: 0 0 calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3); }
 @media (max-width: 980px) { .b2b-wireframe-page .b2b-verticals--five > article { flex-basis: calc((100% - 24px) / 2); max-width: calc((100% - 24px) / 2); } }
 @media (max-width: 620px) { .b2b-wireframe-page .b2b-verticals--five > article { flex-basis: 100%; max-width: 100%; } }
+
+/* ============================================================
+   v24 — Shane review (2026-06-05): new dynamic icon set + section
+   photos. Icons are now yellow glyphs on navy gradient tiles (far
+   more dynamic than the old flat-white tiles; reads on white AND
+   orange cards). Plus a feature photo in "Here's why it works" and
+   one photo per "Add scalability" outcome card.
+   ============================================================ */
+
+/* --- dynamic icon tiles: navy gradient + yellow glyph --- */
+.b2b-wireframe-page .b2b-ptile,
+.b2b-wireframe-page .b2b-vchip {
+  background: linear-gradient(140deg, #1d2c5a 0%, #0E1940 72%) !important;
+  border: 0 !important; box-shadow: 0 6px 16px rgba(14,25,64,.20);
+}
+.b2b-wireframe-page #why .b2b-products article .b2b-ptile { background: linear-gradient(140deg, #1d2c5a 0%, #0E1940 72%) !important; border: 0 !important; }
+/* bare copilot-feature icons get the same navy tile */
+.b2b-wireframe-page .b2b-copilot-feats article > img {
+  width: 52px !important; height: 52px !important; padding: 12px; border-radius: 14px;
+  background: linear-gradient(140deg, #1d2c5a 0%, #0E1940 72%);
+  box-shadow: 0 6px 16px rgba(14,25,64,.16); box-sizing: border-box;
+}
+
+/* --- "Here's why it works" feature photo --- */
+.b2b-wireframe-page .b2b-feature-img { margin: 0 auto 44px; max-width: 1000px; border-radius: 16px; overflow: hidden; border: 1px solid var(--df-y500); }
+.b2b-wireframe-page .b2b-feature-img img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 7; object-fit: cover; }
+
+/* --- outcome-card photos (one per card) --- */
+.b2b-wireframe-page #outcomes .b2b-outcomes-grid article { padding: 0; overflow: hidden; }
+.b2b-wireframe-page #outcomes .b2b-outcomes-grid article > :not(.b2b-omedia) { padding-left: 24px; padding-right: 24px; }
+.b2b-wireframe-page #outcomes .b2b-outcomes-grid article > h3 { padding-top: 20px; }
+.b2b-wireframe-page #outcomes .b2b-outcomes-grid article > .b2b-carddiv { margin-left: 24px; }
+.b2b-wireframe-page .b2b-omedia { width: 100%; aspect-ratio: 16 / 10; overflow: hidden; margin-bottom: 4px; }
+.b2b-wireframe-page .b2b-omedia img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* v24.1 — apply the same two-line header standard to the companion pages
+   (Contract Security + pricing). Hero headers are exempt; #proof (marquee)
+   is intentionally NOT included so "Sourced from the boards" stays as-is. */
+.b2b-wireframe-page :is(#cs-fit,#cs-difference,#cs-products,#plans,#how) .b2b-lead { max-width: 860px; }
+.b2b-wireframe-page :is(#cs-fit,#cs-difference,#cs-products,#plans,#how) .b2b-lead .growth-h2 { font-size: 46px; line-height: 1.05; }
+@media (max-width: 760px) {
+  .b2b-wireframe-page :is(#cs-fit,#cs-difference,#cs-products,#plans,#how) .b2b-lead .growth-h2 { font-size: 32px; }
+}
