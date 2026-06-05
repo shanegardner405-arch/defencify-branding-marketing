@@ -2647,8 +2647,21 @@ html {
    Appended as an override block so base styles stay intact.
    ================================================================ */
 
-/* 1) White hero (was Yellow 100 cream) */
-.b2b-hero { background: var(--df-white); }
+/* 1) Warm hero band (John 06-04: "header banner needs color and contrast, too much
+   white space at the top"). Yellow 100 cream is brand-approved for header backgrounds;
+   fades into the white body, with a Yellow 500 accent rule for contrast. */
+.b2b-hero {
+  position: relative;
+  background: linear-gradient(176deg, #FFF3DD 0%, #FFF6E6 40%, #FFFBF2 72%, var(--df-white) 100%);
+  border-bottom: 1px solid var(--df-y100);
+}
+.b2b-hero::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 4px;
+  background: var(--df-y500);
+}
 
 /* 2) De-box: bordered cell-grids -> open, breathing columns */
 .b2b-signal-grid,
@@ -3608,4 +3621,29 @@ html {
    copy column (title wrapped one char per line). Restore the mobile stack. */
 @media (max-width: 760px) {
   .b2b-wireframe-page .b2b-hero { grid-template-columns: 1fr; padding-right: 24px; gap: 24px; }
+}
+
+/* Hero headline gloss must wrap — John's "competitive advantage." is longer than the
+   old short highlight; the inherited nowrap on .hl blew out the mobile container width
+   and clipped all hero text. Allow it to wrap (stays one line on wide desktop columns). */
+.b2b-wireframe-page .b2b-hero .growth-title .hl { white-space: normal; }
+
+/* Mobile hero: hard-constrain copy + headline to the viewport so nothing overflows
+   right. John's longer headline needs break-word + a viewport-relative size. */
+@media (max-width: 760px) {
+  .b2b-wireframe-page .b2b-hero { padding-left: 20px; padding-right: 20px; }
+  .b2b-wireframe-page .b2b-hero__copy { max-width: 100%; min-width: 0; }
+  .b2b-wireframe-page .b2b-hero .growth-title {
+    font-size: clamp(32px, 8vw, 42px);
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .b2b-wireframe-page .b2b-hero .growth-lede { max-width: 100%; overflow-wrap: break-word; }
+  /* Two CTAs on one row force the copy column's min-content past the viewport and
+     clip everything; let them wrap and let the column shrink. */
+  .b2b-wireframe-page .b2b-hero__actions { flex-wrap: wrap; }
+  .b2b-wireframe-page .b2b-hero__copy { overflow-wrap: break-word; }
+  .b2b-wireframe-page .b2b-hero,
+  .b2b-wireframe-page .b2b-hero__copy,
+  .b2b-wireframe-page .b2b-hero__media { min-width: 0; }
 }
