@@ -3776,3 +3776,17 @@ html {
 /* secondary CTA visible on dark */
 .b2b-wireframe-page .b2b-hero .b2b-cta-secondary { color: #FFFFFF; border-bottom-color: var(--df-y500); }
 .b2b-wireframe-page .b2b-hero .b2b-cta-secondary:hover { color: var(--df-y500); }
+
+/* ============================================================
+   v22 — On-page jump nav (Adam DeBrincat feedback: long page,
+   "place 'see how to accomplish abc' buttons in certain locations
+   that bring them to sections quicker"). Slim pill row under the
+   hero/stat-strip. On-brand: hairline borders, yellow hover, no
+   shadow. Non-sticky to avoid overlap with the brandbook chrome.
+   ============================================================ */
+.b2b-wireframe-page .b2b-jumpbar { border-top: 1px solid var(--df-g200); border-bottom: 1px solid var(--df-g200); background: var(--df-white); }
+.b2b-wireframe-page .b2b-jumpbar__inner { display: flex; align-items: center; gap: 10px 14px; flex-wrap: wrap; padding-top: 16px; padding-bottom: 16px; }
+.b2b-wireframe-page .b2b-jumpbar__label { font-family: var(--df-font-display); font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--df-g700); margin-right: 6px; }
+.b2b-wireframe-page .b2b-jumpbar a { font-family: var(--df-font-display); font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--df-b900); text-decoration: none; padding: 8px 16px; border: 1px solid var(--df-g200); border-radius: 999px; transition: border-color .2s ease, color .2s ease, background .2s ease; }
+.b2b-wireframe-page .b2b-jumpbar a:hover { border-color: var(--df-y500); color: var(--df-y700); background: var(--df-y100); }
+@media (max-width: 760px) { .b2b-wireframe-page .b2b-jumpbar__inner { gap: 8px 8px; } .b2b-wireframe-page .b2b-jumpbar__label { width: 100%; margin-bottom: 2px; } }
