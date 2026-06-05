@@ -4174,3 +4174,31 @@ html {
 .b2b-wireframe-page .b2b-footer__meta a { color: var(--df-y500); text-decoration: none; }
 .b2b-wireframe-page .b2b-footer__meta a:hover { color: #fff; }
 .b2b-wireframe-page .b2b-footer__meta span { color: rgba(255,255,255,.55); }
+
+/* ============================================================
+   v29 — Shane review (2026-06-05): match hero chevron field on the
+   Source band, move the Free-for-your-team section to the One-Platform
+   grey + texture, de-bland the Co-Pilot cards.
+   ============================================================ */
+
+/* (2) Source from the boards: WHITE chevron field like the hero (navy is invisible on dark) */
+.b2b-wireframe-page .b2b-proof::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%23FFFFFF' stroke-width='1.3'/%3E%3C/svg%3E") !important;
+  opacity: .05 !important;
+}
+
+/* (4) Free-for-your-team / "See it answer": same grey + chevron texture as One Platform (not dark) */
+.b2b-wireframe-page #copilot { background: var(--df-surface) !important; background-image: none !important; }
+.b2b-wireframe-page #copilot .b2b-lead .growth-h2 { color: var(--df-g700); }
+.b2b-wireframe-page #copilot .b2b-lead p { color: var(--df-g700); }
+.b2b-wireframe-page #copilot .growth-eyebrow { color: var(--df-b900); }
+.b2b-wireframe-page #copilot .growth-eyebrow::before { background: var(--df-y500); }
+
+/* (3) Reg Co-Pilot feature cards: de-bland with a premium navy top-rule accent
+   (mirrors the One-Platform yellow rule) + a clean spacing refresh */
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article { overflow: hidden; padding-top: 26px; }
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article::before {
+  display: block !important; content: "" !important; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--df-b900) !important; opacity: .9; border: 0 !important; -webkit-mask: none !important; mask: none !important;
+}
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article > img { width: 50px !important; height: 50px !important; }
