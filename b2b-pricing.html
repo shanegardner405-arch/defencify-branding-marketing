@@ -33,7 +33,7 @@
   <!-- HERO -->
   <header class="b2b-hero b2b-hero--short" id="overview">
     <div class="b2b-hero__copy" data-reveal>
-      <img src="assets/defencify-logo-01.png" alt="Defencify" class="b2b-logo" />
+      <img src="assets/defencify-logo-02-reversed.png" alt="Defencify" class="b2b-logo" />
       <span class="growth-eyebrow">Pricing &amp; plans</span>
       <h1 class="growth-title">Pricing built for<br /><span class="hl gloss">predictable growth.</span></h1>
       <p class="growth-lede">Annual contracts, billed annually or semi-annually, with a cap on unique yearly users so your budget and your platform usage stay <span class="emph">predictable</span>. Start with the access level you need and expand as your operation grows.</p>
@@ -135,5 +135,97 @@
 
 </main>
 
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // build the living 51-jurisdiction grid (9 cols, diagonal wave, scattered "covered" cells)
+  var grid = document.querySelector('.b2b-stategrid');
+  if (grid) {
+    var n = parseInt(grid.getAttribute('data-cells') || '51', 10), cols = 9;
+    var on = {4:1,11:1,19:1,26:1,33:1,41:1,48:1}; // scattered yellow cells
+    for (var k = 0; k < n; k++) {
+      var cell = document.createElement('i');
+      var row = Math.floor(k / cols), col = k % cols;
+      cell.style.setProperty('--c', row + col);
+      if (on[k]) cell.className = 'is-on';
+      grid.appendChild(cell);
+    }
+  }
+
+  // count-up (rAF, ease-out, first view only)
+  function countUp(el) {
+    var target = parseFloat(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (reduce || isNaN(target)) { el.textContent = target + suffix; return; }
+    var dur = 1100, t0 = null;
+    function step(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // per-state sourcing carousel: dots, prev/next, scroll-sync, gentle autoplay
+  document.querySelectorAll('.df-carousel').forEach(function (car) {
+    var track = car.querySelector('.df-carousel__track');
+    var slides = Array.prototype.slice.call(car.querySelectorAll('.df-carousel__slide'));
+    var dotsWrap = car.querySelector('.df-carousel__dots');
+    var navs = car.querySelectorAll('.df-carousel__nav');
+    if (!track || !slides.length) return;
+    var idx = 0, timer = null;
+    slides.forEach(function (sl, i) {
+      var d = document.createElement('button');
+      d.type = 'button'; d.setAttribute('role', 'tab'); d.setAttribute('aria-label', 'State ' + (i + 1));
+      d.addEventListener('click', function () { go(i, true); });
+      dotsWrap.appendChild(d);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+    function setActive(i) { idx = i; dots.forEach(function (d, j) { d.setAttribute('aria-selected', j === i ? 'true' : 'false'); }); }
+    function go(i, user) {
+      i = (i + slides.length) % slides.length;
+      track.scrollTo({ left: slides[i].offsetLeft - track.offsetLeft, behavior: reduce ? 'auto' : 'smooth' });
+      setActive(i); if (user) restart();
+    }
+    navs.forEach(function (b) { b.addEventListener('click', function () { go(idx + parseInt(b.getAttribute('data-dir'), 10), true); }); });
+    var st;
+    track.addEventListener('scroll', function () {
+      clearTimeout(st);
+      st = setTimeout(function () {
+        var nearest = 0, min = Infinity;
+        slides.forEach(function (sl, i) { var d = Math.abs(sl.offsetLeft - track.offsetLeft - track.scrollLeft); if (d < min) { min = d; nearest = i; } });
+        setActive(nearest);
+      }, 90);
+    }, { passive: true });
+    setActive(0);
+    var auto = parseInt(car.getAttribute('data-autoplay') || '0', 10);
+    function start() { if (auto && !reduce && !timer) timer = setInterval(function () { go(idx + 1); }, auto); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function restart() { stop(); start(); }
+    ['mouseenter', 'focusin', 'pointerdown'].forEach(function (e) { car.addEventListener(e, stop); });
+    ['mouseleave', 'focusout'].forEach(function (e) { car.addEventListener(e, start); });
+    start();
+  });
+
+  var nodes = document.querySelectorAll('[data-reveal], [data-rise], .gloss');
+  function fire(target) {
+    target.classList.add('is-in');
+    target.querySelectorAll('[data-count]').forEach(countUp);
+  }
+  if (reduce || !('IntersectionObserver' in window)) {
+    nodes.forEach(fire);
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { fire(e.target); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  nodes.forEach(function (n) { io.observe(n); });
+})();
+</script>
 </body>
 </html>
