@@ -4095,3 +4095,82 @@ html {
 .b2b-wireframe-page :is(#outcomes .b2b-outcomes-grid article, #verticals .b2b-verticals--five article):hover {
   transform: translateY(-4px); box-shadow: 0 2px 2px rgba(14,25,64,.06), 0 24px 52px rgba(14,25,64,.15);
 }
+
+/* ============================================================
+   v28 — Shane review (2026-06-05): section backgrounds + more orange
+   + Defencify-branding (logos) + Learn-more buttons.
+   ============================================================ */
+
+/* ---- Learn-more buttons on the Why cards (approved Navy pill + chevron) ---- */
+.b2b-wireframe-page .b2b-learn { display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; padding: 11px 20px; font-size: 12px; letter-spacing: .6px; }
+.b2b-wireframe-page .b2b-learn .b2b-chev { width: 13px; height: 8px; display: block; flex: 0 0 auto; transition: transform .22s cubic-bezier(.2,.8,.2,1); }
+.b2b-wireframe-page .b2b-learn:hover .b2b-chev { transform: translateX(4px); }
+.b2b-wireframe-page #why .b2b-products article { display: flex; flex-direction: column; align-items: flex-start; }
+.b2b-wireframe-page #why .b2b-products article .b2b-learn { margin-top: auto; }
+
+/* ---- a reusable dark surface (the hero darkness) ---- */
+.b2b-wireframe-page .b2b-proof {
+  background-image:
+    radial-gradient(118% 82% at 6% -6%, rgba(252,175,50,.18) 0%, rgba(252,175,50,0) 50%),
+    linear-gradient(162deg, #2B2F34 0%, #3A3F45 54%, #2E3236 100%) !important;
+}
+.b2b-wireframe-page :is(#copilot-product, #copilot) {
+  background-image:
+    linear-gradient(rgba(22,26,32,.82), rgba(30,34,40,.90)),
+    url("growth/gpt2-b2b-bg-lobby-dark.png") !important;
+  background-size: cover !important; background-position: center !important;
+}
+/* text on the dark sections */
+.b2b-wireframe-page :is(.b2b-proof, #copilot-product, #copilot) .b2b-lead .growth-h2 { color: #fff; }
+.b2b-wireframe-page :is(.b2b-proof, #copilot-product, #copilot) .b2b-lead p { color: rgba(255,255,255,.82); }
+.b2b-wireframe-page :is(.b2b-proof, #copilot-product, #copilot) .growth-eyebrow { color: var(--df-y500); }
+.b2b-wireframe-page :is(.b2b-proof, #copilot-product, #copilot) .growth-eyebrow::before { background: var(--df-y500); }
+.b2b-wireframe-page :is(#copilot-product, #copilot) .b2b-showrow__cards .growth-eyebrow { color: var(--df-y500); }
+.b2b-wireframe-page #copilot-product .b2b-copilot-cta span { color: rgba(255,255,255,.8); }
+
+/* ---- Source from the boards: orange marquee cards on the dark band ---- */
+.b2b-wireframe-page .df-marquee .df-mq__card {
+  background: var(--df-y500) !important; background-image: none !important; animation: none !important;
+  border: 0 !important; box-shadow: 0 14px 34px rgba(0,0,0,.28);
+}
+.b2b-wireframe-page .df-marquee .df-mq__card::before { display: none !important; }
+.b2b-wireframe-page .df-marquee .df-mq__body, .b2b-wireframe-page .df-marquee .df-mq__course, .b2b-wireframe-page .df-marquee .df-mq__state, .b2b-wireframe-page .df-marquee .df-mq__hours { color: var(--df-b900) !important; }
+.b2b-wireframe-page .df-marquee .df-mq__course svg { color: var(--df-b900) !important; }
+.b2b-wireframe-page .df-marquee .df-mq__agency { color: rgba(14,25,64,.72) !important; }
+.b2b-wireframe-page .df-marquee .df-mq__wm { color: var(--df-b900) !important; opacity: .14 !important; }
+
+/* ---- Reg Co-Pilot: MORE ORANGE — feature cards go orange on the dark band ---- */
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article {
+  background-color: var(--df-y500) !important;
+  border: 1px solid rgba(14,25,64,.14) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.40), 0 1px 1px rgba(0,0,0,.18), 0 18px 40px rgba(0,0,0,.28);
+}
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article::before { display: none !important; } /* drop the white-card top rule */
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article :is(h4, p) { color: var(--df-b900) !important; }
+/* deeplink pills: solid yellow so they read on dark */
+.b2b-wireframe-page #copilot-product .b2b-deeplinks a { background: var(--df-y500); border-color: var(--df-y500); color: var(--df-b900); }
+/* showcards stay white and pop on the dark band (already premium from v27) */
+
+/* ---- Free-for-your-team capture card: white-inset Defencify logo (never on yellow) ---- */
+.b2b-wireframe-page .b2b-capture__logobox { display: inline-flex; align-items: center; justify-content: center; background: #fff; border-radius: 10px; padding: 10px 16px; margin-bottom: 16px; box-shadow: 0 4px 14px rgba(14,25,64,.16); }
+.b2b-wireframe-page .b2b-capture__logobox .b2b-capture__logo { width: 116px; height: auto; display: block; margin: 0; }
+
+/* ---- Outcomes + Verticals: muted architectural backgrounds (no people) ---- */
+.b2b-wireframe-page #outcomes {
+  background-image: linear-gradient(rgba(244,244,246,.84), rgba(244,244,246,.88)), url("growth/gpt2-b2b-bg-lobby-light.png") !important;
+  background-size: cover !important; background-position: center !important;
+}
+.b2b-wireframe-page #verticals {
+  background-image: linear-gradient(rgba(244,244,246,.85), rgba(244,244,246,.89)), url("growth/gpt2-b2b-bg-building-light.png") !important;
+  background-size: cover !important; background-position: center !important;
+}
+
+/* ---- proper footer ---- */
+.b2b-wireframe-page .b2b-footer { background: linear-gradient(162deg, #2B2F34 0%, #3A3F45 100%); border-top: 3px solid var(--df-y500); }
+.b2b-wireframe-page .b2b-footer__inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding-top: 46px; padding-bottom: 46px; }
+.b2b-wireframe-page .b2b-footer__logo { width: 188px; height: auto; }
+.b2b-wireframe-page .b2b-footer__tag { color: rgba(255,255,255,.78); font-size: 15px; max-width: 460px; margin: 0; }
+.b2b-wireframe-page .b2b-footer__meta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 22px; font-family: var(--df-font-display); font-size: 12px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; }
+.b2b-wireframe-page .b2b-footer__meta a { color: var(--df-y500); text-decoration: none; }
+.b2b-wireframe-page .b2b-footer__meta a:hover { color: #fff; }
+.b2b-wireframe-page .b2b-footer__meta span { color: rgba(255,255,255,.55); }
