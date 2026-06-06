@@ -4114,11 +4114,11 @@ html {
 .b2b-wireframe-page #why .b2b-products article .b2b-learn { margin-top: auto; }
 
 /* ---- a reusable dark surface (the hero darkness) ---- */
+/* Source-from-the-boards now WHITE with animated chevrons, like the Jobs section
+   (Shane v39: cleaner dark/white rhythm - breaks the long dark run) */
 .b2b-wireframe-page .b2b-proof {
-  background-image:
-    radial-gradient(118% 82% at 6% -6%, rgba(252,175,50,.18) 0%, rgba(252,175,50,0) 50%),
-    radial-gradient(110% 150% at 100% 100%, rgba(252,175,50,.20) 0%, rgba(252,175,50,0) 50%),
-    linear-gradient(162deg, #2B2F34 0%, #3A3F45 54%, #2E3236 100%) !important;
+  background: var(--df-white) !important;
+  background-image: none !important;
 }
 .b2b-wireframe-page :is(#copilot-product, #copilot) {
   background-image:
@@ -4126,11 +4126,11 @@ html {
     url("growth/gpt2-b2b-bg-lobby-dark.png") !important;
   background-size: cover !important; background-position: center !important;
 }
-/* text on the dark sections */
-.b2b-wireframe-page :is(.b2b-proof, #copilot-product, #copilot) .b2b-lead .growth-h2 { color: #fff; }
-.b2b-wireframe-page :is(.b2b-proof, #copilot-product, #copilot) .b2b-lead p { color: rgba(255,255,255,.82); }
-.b2b-wireframe-page :is(.b2b-proof, #copilot-product, #copilot) .growth-eyebrow { color: var(--df-y500); }
-.b2b-wireframe-page :is(.b2b-proof, #copilot-product, #copilot) .growth-eyebrow::before { background: var(--df-y500); }
+/* text on the dark sections (proof is now a light section, so it is excluded) */
+.b2b-wireframe-page :is(#copilot-product, #copilot) .b2b-lead .growth-h2 { color: #fff; }
+.b2b-wireframe-page :is(#copilot-product, #copilot) .b2b-lead p { color: rgba(255,255,255,.82); }
+.b2b-wireframe-page :is(#copilot-product, #copilot) .growth-eyebrow { color: var(--df-y500); }
+.b2b-wireframe-page :is(#copilot-product, #copilot) .growth-eyebrow::before { background: var(--df-y500); }
 .b2b-wireframe-page :is(#copilot-product, #copilot) .b2b-showrow__cards .growth-eyebrow { color: var(--df-y500); }
 .b2b-wireframe-page #copilot-product .b2b-copilot-cta span { color: rgba(255,255,255,.8); }
 
@@ -4194,10 +4194,10 @@ html {
    grey + texture, de-bland the Co-Pilot cards.
    ============================================================ */
 
-/* (2) Source from the boards: WHITE chevron field like the hero (navy is invisible on dark) */
+/* (2) Source from the boards: NAVY animated chevron field on white, matching the Jobs section */
 .b2b-wireframe-page .b2b-proof::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%23FFFFFF' stroke-width='1.3'/%3E%3C/svg%3E") !important;
-  opacity: .08 !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%230E1940' stroke-width='1.3'/%3E%3C/svg%3E") !important;
+  opacity: .04 !important;
 }
 
 /* (4) Free-for-your-team / "See it answer": same grey + chevron texture as One Platform (not dark) */
