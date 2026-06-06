@@ -4326,17 +4326,24 @@ html {
    (b) "One Platform" (#solutions) on the dark graphite surface (hero / source-from-boards)
    ============================================================ */
 
-/* (a) flow-arrows in the outcomes gutters - absolute children, out of grid flow */
+/* (a) flow-nodes bridging the outcome-card gutters - circular graphite chips with a
+   yellow chevron, centered on the card row (in the white text gutter, not over photos) */
 .b2b-wireframe-page #outcomes .b2b-outcomes-grid { position: relative; }
-.b2b-wireframe-page #outcomes .b2b-flowarrow {
-  position: absolute; top: 118px; transform: translate(-50%, -50%);
-  width: 30px; height: 18px; color: var(--df-y500); z-index: 2; pointer-events: none;
+.b2b-wireframe-page #outcomes .b2b-flownode {
+  position: absolute; top: 50%; transform: translate(-50%, -50%);
+  width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%;
+  background: linear-gradient(140deg, #3A3F45 0%, #2B2F34 72%);
+  border: 3px solid #fff; box-shadow: 0 6px 18px rgba(28,30,32,.30);
+  color: var(--df-y500); z-index: 5; pointer-events: none;
 }
-.b2b-wireframe-page #outcomes .b2b-flowarrow svg { width: 100%; height: 100%; display: block;
-  filter: drop-shadow(0 1px 2px rgba(28,30,32,.28)); }
-.b2b-wireframe-page #outcomes .b2b-flowarrow--1 { left: 33.333%; }
-.b2b-wireframe-page #outcomes .b2b-flowarrow--2 { left: 66.667%; }
-@media (max-width: 880px) { .b2b-wireframe-page #outcomes .b2b-flowarrow { display: none; } }
+.b2b-wireframe-page #outcomes .b2b-flownode svg { width: 17px; height: 17px; display: block; }
+.b2b-wireframe-page #outcomes .b2b-flownode--1 { left: 33.333%; }
+.b2b-wireframe-page #outcomes .b2b-flownode--2 { left: 66.667%; }
+@media (max-width: 880px) { .b2b-wireframe-page #outcomes .b2b-flownode { display: none; } }
+
+/* (c) orange second line on the why-card titles (matches section-header .hl);
+   overrides the charcoal !important card-title color */
+.b2b-wireframe-page #why .b2b-products article h3 .hl { color: var(--df-y500) !important; }
 
 /* (b) One Platform -> dark graphite surface */
 .b2b-wireframe-page #solutions {
