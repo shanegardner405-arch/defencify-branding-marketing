@@ -4264,3 +4264,54 @@ html {
 .b2b-wireframe-page :is(.b2b-feature-img, .b2b-omedia, .b2b-vmedia, .df-mq__media, .b2b-hero__media, .b2b-shot__frame) { border-radius: 5px !important; }
 /* buttons / pills / fields -> sharp (override the brand pill on this surface) */
 .b2b-wireframe-page :is(.bb-button, .b2b-cta-primary, .b2b-learn, .b2b-deeplinks a, .b2b-mobilecta a, .b2b-capture .field, .b2b-briefband__form .field) { border-radius: 6px !important; }
+
+/* ============================================================
+   v31 — Shane review (2026-06-05): remove ALL blue/navy (Blue 900).
+   Button colors are now orange / white / graphite only; icon-tile
+   backgrounds go graphite; titles go charcoal graphite (which is what
+   the Defencify brandbook specifies for headings, not Blue 900).
+   GRAPHITE = #2C2F31 solid, gradient #3A3F45 -> #2B2F34.
+   ============================================================ */
+
+/* ---- icon tiles: navy -> graphite ---- */
+.b2b-wireframe-page :is(.b2b-ptile, .b2b-vchip),
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article > img {
+  background: linear-gradient(140deg, #3A3F45 0%, #2B2F34 72%) !important;
+}
+
+/* ---- PRIMARY CTAs -> orange (approved Primary: yellow bg, charcoal text) ---- */
+.b2b-wireframe-page .b2b-cta-primary { background: var(--df-y500) !important; color: #2C2F31 !important; }
+.b2b-wireframe-page .b2b-cta-primary:hover { background: var(--df-y700) !important; color: #fff !important; }
+
+/* ---- dark "navy" buttons -> graphite ---- */
+.b2b-wireframe-page .bb-button--navy,
+.b2b-wireframe-page .b2b-closing--yellow .bb-button--navy {
+  background: #2C2F31 !important; color: #fff !important; border: 1.5px solid #2C2F31 !important;
+}
+.b2b-wireframe-page .bb-button--navy:hover { background: #1f2123 !important; border-color: #1f2123 !important; }
+
+/* ---- ghost / secondary / outline buttons: navy ink+border -> graphite ---- */
+.b2b-wireframe-page .b2b-closing--yellow .bb-button--ghost-on-yellow { color: #2C2F31 !important; border-color: #2C2F31 !important; }
+.b2b-wireframe-page .b2b-closing--yellow .bb-button--ghost-on-yellow:hover { background: #2C2F31 !important; color: #fff !important; }
+.b2b-wireframe-page .b2b-cta-secondary { color: #2C2F31 !important; }
+.b2b-wireframe-page .b2b-hero .b2b-cta-secondary { color: #FFFFFF !important; } /* keep white on the dark hero */
+.b2b-wireframe-page .b2b-closing .b2b-cta-secondary { color: #2C2F31 !important; }
+.b2b-wireframe-page .b2b-vcta, .b2b-wireframe-page #verticals .b2b-verticals--five article .b2b-vcta {
+  color: #2C2F31 !important; border-color: rgba(44,47,49,.4) !important;
+}
+.b2b-wireframe-page .b2b-vcta span { color: #2C2F31 !important; }
+.b2b-wireframe-page .b2b-vcta:hover, .b2b-wireframe-page #verticals .b2b-verticals--five article .b2b-vcta:hover { background: #2C2F31 !important; color: #fff !important; }
+.b2b-wireframe-page .b2b-vcta:hover span { color: var(--df-y500) !important; }
+/* mobile sticky bar */
+.b2b-wireframe-page .b2b-mobilecta .b2b-cta-primary { background: var(--df-y500) !important; color: #2C2F31 !important; }
+.b2b-wireframe-page .b2b-mobilecta .b2b-cta-ghost { background: #2C2F31 !important; color: #fff !important; border-color: #2C2F31 !important; }
+
+/* ---- card titles + the proof chip: Blue 900 -> charcoal graphite ---- */
+.b2b-wireframe-page :is(#why .b2b-products article, #jobs .b2b-showcard, #solutions .b2b-products article, #copilot-product .b2b-copilot-feats article, #copilot-product .b2b-showcard, #outcomes .b2b-outcomes-grid article, #verticals .b2b-verticals--five article, .b2b-capture) :is(h3,h4) { color: #2C2F31 !important; }
+.b2b-wireframe-page .df-marquee :is(.df-mq__state, .df-mq__course, .df-mq__hours) { color: #2C2F31 !important; }
+.b2b-wireframe-page .b2b-hero__proof strong { color: #2C2F31 !important; }
+
+/* v31.1 — flip the Blue 900 token to charcoal graphite across the whole
+   wireframe page so every remaining navy text/accent (closing header,
+   eyebrows, etc.) becomes graphite. Buttons/tiles handled above. */
+.b2b-wireframe-page { --df-b900: #2C2F31; }
