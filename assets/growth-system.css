@@ -4384,3 +4384,28 @@ html {
 .b2b-wireframe-page :is(#outcomes, #verticals) .b2b-lead > p { color: rgba(255,255,255,.84) !important; }
 .b2b-wireframe-page :is(#outcomes, #verticals) .growth-eyebrow { color: var(--df-y500) !important; }
 .b2b-wireframe-page :is(#outcomes, #verticals) .growth-eyebrow::before { background: var(--df-y500) !important; }
+
+/* ============================================================
+   v40 - Shane review (2026-06-06):
+   (a) Meet the Regulatory Co-Pilot: add top-left + bottom-right orange corner glows
+       (image + dark color unchanged, glows layered on top)
+   (b) Parallax: the generated background images stay fixed while content scrolls
+       (Wix-style background-attachment: fixed), with a mobile fallback to scroll.
+   ============================================================ */
+.b2b-wireframe-page #copilot-product {
+  background-image:
+    radial-gradient(118% 82% at 6% -6%, rgba(252,175,50,.16) 0%, rgba(252,175,50,0) 50%),
+    radial-gradient(112% 120% at 100% 100%, rgba(252,175,50,.16) 0%, rgba(252,175,50,0) 52%),
+    linear-gradient(rgba(22,26,32,.82), rgba(30,34,40,.90)),
+    url("growth/gpt2-b2b-bg-lobby-dark.png") !important;
+  background-size: cover !important; background-position: center !important;
+}
+/* (b) parallax on the image-backed sections */
+.b2b-wireframe-page :is(.b2b-hero, #outcomes, #verticals, #copilot-product) {
+  background-attachment: fixed !important;
+}
+@media (max-width: 900px) {
+  .b2b-wireframe-page :is(.b2b-hero, #outcomes, #verticals, #copilot-product) {
+    background-attachment: scroll !important;
+  }
+}
