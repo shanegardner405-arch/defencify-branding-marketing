@@ -4342,7 +4342,7 @@ html {
   position: absolute; top: 50%; transform: translate(-50%, -50%);
   width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%;
   background: linear-gradient(140deg, #3A3F45 0%, #2B2F34 72%);
-  border: 3px solid #fff; box-shadow: 0 6px 18px rgba(28,30,32,.30);
+  border: 1.5px solid rgba(255,255,255,.72); box-shadow: 0 6px 18px rgba(28,30,32,.30);
   color: var(--df-y500); z-index: 5; pointer-events: none;
 }
 .b2b-wireframe-page #outcomes .b2b-flownode svg { width: 17px; height: 17px; display: block; }
@@ -4408,4 +4408,26 @@ html {
   .b2b-wireframe-page :is(.b2b-hero, #outcomes, #verticals, #copilot-product) {
     background-attachment: scroll !important;
   }
+}
+
+/* ============================================================
+   v41 - Shane review (2026-06-06): "Here's why it works" (Learn more) and
+   "Built for your environment" (Explore) buttons adopt the exact
+   "See the jobs board" style (.bb-button--navy graphite fill). Card
+   positioning is preserved; the chevron/arrow icons are hidden to match.
+   ============================================================ */
+.b2b-wireframe-page #why .b2b-products article .b2b-learn,
+.b2b-wireframe-page #verticals .b2b-vcta {
+  background: #2C2F31 !important; color: #fff !important; border: 1.5px solid #2C2F31 !important;
+  padding: 15px 32px !important; font-family: var(--df-font-display) !important;
+  font-size: 13px !important; font-weight: 700 !important; letter-spacing: 1px !important;
+  text-transform: uppercase !important; border-radius: 6px !important;
+  gap: 0 !important; justify-content: center !important;
+}
+.b2b-wireframe-page #why .b2b-products article .b2b-learn .b2b-chev,
+.b2b-wireframe-page #verticals .b2b-vcta span { display: none !important; }
+.b2b-wireframe-page #why .b2b-products article .b2b-learn:hover,
+.b2b-wireframe-page #verticals .b2b-vcta:hover {
+  background: #1f2123 !important; border-color: #1f2123 !important; color: #fff !important;
+  transform: translateY(-2px);
 }
