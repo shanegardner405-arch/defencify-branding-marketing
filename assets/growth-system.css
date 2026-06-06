@@ -3274,10 +3274,10 @@ html {
 .b2b-hero::before, .b2b-proof::before, #verticals::before, #solutions::before, #copilot::before {
   content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%230E1940' stroke-width='1.3'/%3E%3C/svg%3E");
-  background-size: 46px 46px; opacity: .04; animation: chevDrift 55s linear infinite;
+  background-size: 46px 46px; opacity: .04; animation: chevDrift 3s linear infinite;
 }
 .b2b-hero__copy, .b2b-hero__media, .b2b-proof .growth-inner, #verticals .growth-inner, #solutions .growth-inner, #copilot .growth-inner { position: relative; z-index: 1; }
-@keyframes chevDrift { from { background-position: 0 0; } to { background-position: 46px 46px; } }
+@keyframes chevDrift { from { background-position: 0 0; } to { background-position: 46px 0; } }
 @media (prefers-reduced-motion: reduce) {
   .b2b-hero::before, .b2b-proof::before, #verticals::before, #solutions::before, #copilot::before { animation: none; }
 }
@@ -3327,7 +3327,7 @@ html {
 #copilot-product::before {
   content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%230E1940' stroke-width='1.3'/%3E%3C/svg%3E");
-  background-size: 46px 46px; opacity: .04; animation: chevDrift 55s linear infinite;
+  background-size: 46px 46px; opacity: .04; animation: chevDrift 3s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) { #copilot-product::before { animation: none; } }
 
@@ -3427,7 +3427,7 @@ html {
 .b2b-jobs::before {
   content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%230E1940' stroke-width='1.3'/%3E%3C/svg%3E");
-  background-size: 46px 46px; opacity: .04; animation: chevDrift 55s linear infinite;
+  background-size: 46px 46px; opacity: .04; animation: chevDrift 3s linear infinite;
 }
 .b2b-jobs__trust { max-width: 1180px; margin: 44px auto 0; padding-top: 28px; border-top: 1px solid var(--df-g200); display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; }
 .b2b-jobs__trust span { font-family: var(--df-font-display); font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--df-g400); }
@@ -3758,7 +3758,7 @@ html {
 /* faint white chevron texture instead of the navy one used on light sections */
 .b2b-wireframe-page .b2b-hero::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%23FFFFFF' stroke-width='1.3'/%3E%3C/svg%3E");
-  opacity: .05;
+  opacity: .08;
 }
 /* yellow top rule reads strong on the dark surface — make it a touch taller */
 .b2b-wireframe-page .b2b-hero::after { height: 5px; }
@@ -4188,7 +4188,7 @@ html {
 /* (2) Source from the boards: WHITE chevron field like the hero (navy is invisible on dark) */
 .b2b-wireframe-page .b2b-proof::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%23FFFFFF' stroke-width='1.3'/%3E%3C/svg%3E") !important;
-  opacity: .05 !important;
+  opacity: .08 !important;
 }
 
 /* (4) Free-for-your-team / "See it answer": same grey + chevron texture as One Platform (not dark) */
@@ -4355,7 +4355,7 @@ html {
 /* white chevron texture (like the hero) instead of the navy one used on light sections */
 .b2b-wireframe-page #solutions::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%23FFFFFF' stroke-width='1.3'/%3E%3C/svg%3E") !important;
-  opacity: .05 !important;
+  opacity: .08 !important;
 }
 /* section header + lede + chain + feature rows -> light (cards stay white and pop) */
 .b2b-wireframe-page #solutions .b2b-lead .growth-h2 { color: #fff !important; }
