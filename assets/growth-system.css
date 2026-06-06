@@ -3274,7 +3274,7 @@ html {
 .b2b-hero::before, .b2b-proof::before, #verticals::before, #solutions::before, #copilot::before {
   content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%230E1940' stroke-width='1.3'/%3E%3C/svg%3E");
-  background-size: 46px 46px; opacity: .04; animation: chevDrift 3s linear infinite;
+  background-size: 46px 46px; opacity: .04; animation: chevDrift 5s linear infinite;
 }
 .b2b-hero__copy, .b2b-hero__media, .b2b-proof .growth-inner, #verticals .growth-inner, #solutions .growth-inner, #copilot .growth-inner { position: relative; z-index: 1; }
 @keyframes chevDrift { from { background-position: 0 0; } to { background-position: 46px 0; } }
@@ -3327,7 +3327,7 @@ html {
 #copilot-product::before {
   content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%230E1940' stroke-width='1.3'/%3E%3C/svg%3E");
-  background-size: 46px 46px; opacity: .04; animation: chevDrift 3s linear infinite;
+  background-size: 46px 46px; opacity: .04; animation: chevDrift 5s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) { #copilot-product::before { animation: none; } }
 
@@ -3427,7 +3427,7 @@ html {
 .b2b-jobs::before {
   content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%230E1940' stroke-width='1.3'/%3E%3C/svg%3E");
-  background-size: 46px 46px; opacity: .04; animation: chevDrift 3s linear infinite;
+  background-size: 46px 46px; opacity: .04; animation: chevDrift 5s linear infinite;
 }
 .b2b-jobs__trust { max-width: 1180px; margin: 44px auto 0; padding-top: 28px; border-top: 1px solid var(--df-g200); display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; }
 .b2b-jobs__trust span { font-family: var(--df-font-display); font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--df-g400); }
@@ -3751,8 +3751,12 @@ html {
    ============================================================ */
 .b2b-wireframe-page .b2b-hero {
   background:
-    radial-gradient(118% 82% at 6% -6%, rgba(252,175,50,.20) 0%, rgba(252,175,50,0) 50%),
-    linear-gradient(162deg, #2B2F34 0%, #3A3F45 54%, #2E3236 100%);
+    radial-gradient(118% 82% at 6% -6%, rgba(252,175,50,.18) 0%, rgba(252,175,50,0) 50%),
+    linear-gradient(118deg, rgba(40,44,48,.94) 0%, rgba(44,48,53,.86) 46%, rgba(46,50,54,.78) 100%),
+    url("growth/gpt2-b2b-hero-office-dark.jpg");
+  background-size: cover, cover, cover;
+  background-position: center, center, center 38%;
+  background-repeat: no-repeat;
   border-bottom: 1px solid rgba(252,175,50,.30);
 }
 /* faint white chevron texture instead of the navy one used on light sections */
