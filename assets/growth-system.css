@@ -4166,14 +4166,14 @@ html {
 .b2b-wireframe-page #outcomes {
   background-image:
     radial-gradient(118% 82% at 6% -6%, rgba(252,175,50,.14) 0%, rgba(252,175,50,0) 50%),
-    linear-gradient(160deg, rgba(42,46,51,.86) 0%, rgba(46,50,54,.90) 60%, rgba(40,44,48,.92) 100%),
+    linear-gradient(160deg, rgba(42,46,51,.68) 0%, rgba(46,50,54,.74) 60%, rgba(40,44,48,.80) 100%),
     url("growth/gpt2-b2b-bg-lobby-dark.jpg") !important;
   background-size: cover !important; background-position: center !important;
 }
 .b2b-wireframe-page #verticals {
   background-image:
     radial-gradient(118% 82% at 94% 106%, rgba(252,175,50,.13) 0%, rgba(252,175,50,0) 50%),
-    linear-gradient(160deg, rgba(42,46,51,.85) 0%, rgba(46,50,54,.90) 60%, rgba(40,44,48,.92) 100%),
+    linear-gradient(160deg, rgba(42,46,51,.66) 0%, rgba(46,50,54,.72) 60%, rgba(40,44,48,.80) 100%),
     url("growth/gpt2-b2b-bg-building-dark.jpg") !important;
   background-size: cover !important; background-position: center !important;
 }
