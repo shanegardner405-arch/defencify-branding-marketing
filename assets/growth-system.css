@@ -4250,7 +4250,7 @@ html {
 .b2b-wireframe-page :is(#outcomes .b2b-outcomes-grid article, #verticals .b2b-verticals--five article) p { color: var(--df-g700) !important; }
 .b2b-wireframe-page #outcomes .b2b-outcomes-grid article .b2b-omedia { border-bottom: 3px solid var(--df-y500); }
 .b2b-wireframe-page #verticals .b2b-verticals--five article .b2b-vmedia { border-bottom: 3px solid var(--df-y500); }
-.b2b-wireframe-page #verticals .b2b-verticals--five article .b2b-vcta { color: var(--df-b900) !important; border-color: rgba(14,25,64,.4) !important; }
+.b2b-wireframe-page #verticals .b2b-verticals--five article .b2b-vcta { color: #fff !important; border-color: #2C2F31 !important; }
 
 /* capture card -> white; logo sits directly on white (no inset needed) + yellow top rule */
 .b2b-wireframe-page .b2b-capture.tone-bright { background: var(--df-white) !important; border: 1px solid rgba(14,25,64,.10) !important; position: relative; overflow: hidden; }
@@ -4310,7 +4310,7 @@ html {
 .b2b-wireframe-page .b2b-hero .b2b-cta-secondary { color: #FFFFFF !important; } /* keep white on the dark hero */
 .b2b-wireframe-page .b2b-closing .b2b-cta-secondary { color: #2C2F31 !important; }
 .b2b-wireframe-page .b2b-vcta, .b2b-wireframe-page #verticals .b2b-verticals--five article .b2b-vcta {
-  color: #2C2F31 !important; border-color: rgba(44,47,49,.4) !important;
+  color: #fff !important; border-color: #2C2F31 !important;
 }
 .b2b-wireframe-page .b2b-vcta span { color: #2C2F31 !important; }
 .b2b-wireframe-page .b2b-vcta:hover, .b2b-wireframe-page #verticals .b2b-verticals--five article .b2b-vcta:hover { background: #2C2F31 !important; color: #fff !important; }
@@ -4431,3 +4431,16 @@ html {
   background: #1f2123 !important; border-color: #1f2123 !important; color: #fff !important;
   transform: translateY(-2px);
 }
+
+/* ============================================================
+   v42 - Shane review (2026-06-06): Co-Pilot 6 feature cards go WHITE so the
+   verb-first titles read with an orange verb + black body text.
+   ============================================================ */
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article {
+  background-color: var(--df-white) !important;
+  border: 1px solid var(--df-g200) !important;
+  box-shadow: 0 1px 1px rgba(0,0,0,.10), 0 18px 40px rgba(0,0,0,.30) !important;
+}
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article h4 { color: #2C2F31 !important; }
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article p { color: var(--df-g700) !important; }
+.b2b-wireframe-page #copilot-product .b2b-copilot-feats article h4 .cp-verb { color: var(--df-y500) !important; }
