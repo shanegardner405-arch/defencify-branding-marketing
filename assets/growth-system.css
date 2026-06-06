@@ -3869,14 +3869,14 @@ html {
 /* --- dynamic icon tiles: navy gradient + yellow glyph --- */
 .b2b-wireframe-page .b2b-ptile,
 .b2b-wireframe-page .b2b-vchip {
-  background: linear-gradient(140deg, #1d2c5a 0%, #0E1940 72%) !important;
+  background: linear-gradient(140deg, #59616A 0%, #4F575C 72%) !important;
   border: 0 !important; box-shadow: 0 6px 16px rgba(14,25,64,.20);
 }
-.b2b-wireframe-page #why .b2b-products article .b2b-ptile { background: linear-gradient(140deg, #1d2c5a 0%, #0E1940 72%) !important; border: 0 !important; }
+.b2b-wireframe-page #why .b2b-products article .b2b-ptile { background: linear-gradient(140deg, #59616A 0%, #4F575C 72%) !important; border: 0 !important; }
 /* bare copilot-feature icons get the same navy tile */
 .b2b-wireframe-page .b2b-copilot-feats article > img {
   width: 52px !important; height: 52px !important; padding: 12px; border-radius: 14px;
-  background: linear-gradient(140deg, #1d2c5a 0%, #0E1940 72%);
+  background: linear-gradient(140deg, #59616A 0%, #4F575C 72%);
   box-shadow: 0 6px 16px rgba(14,25,64,.16); box-sizing: border-box;
 }
 
@@ -4273,10 +4273,10 @@ html {
    GRAPHITE = #2C2F31 solid, gradient #3A3F45 -> #2B2F34.
    ============================================================ */
 
-/* ---- icon tiles: navy -> graphite ---- */
+/* ---- icon tiles: graphite -> asphalt (Shane review 2026-06-06: Grey-700 #4F575C) ---- */
 .b2b-wireframe-page :is(.b2b-ptile, .b2b-vchip),
 .b2b-wireframe-page #copilot-product .b2b-copilot-feats article > img {
-  background: linear-gradient(140deg, #3A3F45 0%, #2B2F34 72%) !important;
+  background: linear-gradient(140deg, #59616A 0%, #4F575C 72%) !important;
 }
 
 /* ---- PRIMARY CTAs -> orange (approved Primary: yellow bg, charcoal text) ---- */
