@@ -1651,6 +1651,7 @@ html {
 .b2b-wireframes {
   color: var(--df-g700);
   background: var(--df-white);
+  overflow-x: clip;
 }
 
 .b2b-wireframe-page {
@@ -3213,7 +3214,7 @@ html {
 .df-mq__hours { font-family: var(--df-font-display); font-size: 13px; font-weight: 700; letter-spacing:.3px; color: var(--df-b900); }
 .df-mq__agency { font-size: 13px; line-height: 1.45; color: var(--df-g700); }
 @media (prefers-reduced-motion: reduce) {
-  .df-marquee { overflow-x: auto; }
+  .df-marquee { overflow-x: hidden; }
   .df-marquee__track { animation: none; }
   .df-marquee__set:last-child { display: none; }
 }
