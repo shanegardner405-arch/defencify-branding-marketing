@@ -3770,8 +3770,9 @@ html {
 .b2b-wireframe-page .b2b-hero .growth-title { color: #FFFFFF; }
 .b2b-wireframe-page .b2b-hero .growth-title .hl {
   color: var(--df-y500);
-  -webkit-text-decoration-color: rgba(252,175,50,.55);
-  text-decoration-color: rgba(252,175,50,.55);
+  /* Adam 2026-06-09: drop the hero headline underline (crowded the second line on wrap) */
+  -webkit-text-decoration-line: none;
+  text-decoration-line: none;
 }
 .b2b-wireframe-page .b2b-hero .growth-lede { color: rgba(255,255,255,.84); }
 /* drop the pale cream highlighter on dark (white-on-cream washes out); emphasize in yellow */
