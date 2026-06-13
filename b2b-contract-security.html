@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Defencify B2B: Contract Security</title>
+<meta name="description" content="Defencify for contract security: train every guard to the same standard across every site, state, and shift, and prove it to the clients you bid." />
+<link rel="icon" href="assets/defencify-mark.jpeg" />
+<link rel="stylesheet" href="assets/brandbook.css" />
+<link rel="stylesheet" href="assets/pdf-shell.css" />
+<link rel="stylesheet" href="assets/growth-system.css" />
+<style>
+#cs-overview.b2b-hero { align-items: start; min-height: 0; padding-top: 128px; padding-bottom: 116px; }
+.b2b-hero__benefits {
+  flex: 0 0 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  background: rgba(240,242,246,0.94);
+  border: 1px solid rgba(14,25,64,0.14);
+  border-left: 3px solid #f5a623;
+  border-radius: 6px;
+  align-self: start;
+  height: 571px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+}
+.b2b-benefits-topimg {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  flex-shrink: 0;
+}
+.b2b-benefits-inner {
+  flex: 1 1 auto;
+  padding: 1.25rem 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.b2b-benefits-list {
+  flex: 1 1 auto;
+  justify-content: space-evenly;
+}
+.b2b-benefits-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #f5a623;
+}
+.b2b-benefits-list {
+  margin: 0; padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.b2b-benefits-list li {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #374151;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.b2b-benefits-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 6px;
+  height: 6px;
+  background: #f5a623;
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
+
+/* animated navy chevrons on white sections */
+#cs-fit, #cs-products { position: relative; overflow: hidden; }
+#cs-fit::before, #cs-products::before {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none; z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M8 9l9 14-9 14M21 9l9 14-9 14' fill='none' stroke='%230E1940' stroke-width='1.3'/%3E%3C/svg%3E");
+  background-size: 46px 46px; opacity: .04;
+  animation: chevDrift 5s linear infinite;
+}
+#cs-fit .growth-inner, #cs-products .growth-inner { position: relative; z-index: 1; }
+
+/* section CTAs below outcomes grid */
+.b2b-section-ctas {
+  display: flex; gap: 16px; justify-content: center;
+  margin-top: 36px; position: relative; z-index: 2;
+}
+
+/* three-col cards: tighten gap and scale h3 so Training Program title stays one line */
+#cs-fit .b2b-products--three { gap: 16px; }
+#cs-fit .b2b-products--three article { font-size: 0.92em; display: flex; flex-direction: column; }
+#cs-fit .b2b-products--three article h3 { font-size: 0.86rem; letter-spacing: -0.01em; white-space: nowrap; }
+#cs-fit .b2b-products--three article .bb-button { margin-top: auto; }
+
+/* operational difference: dark parallax band */
+#cs-difference {
+  position: relative;
+  background-image:
+    radial-gradient(118% 82% at 6% -6%, rgba(252,175,50,.14) 0%, rgba(252,175,50,0) 50%),
+    linear-gradient(160deg, rgba(38,42,48,.70) 0%, rgba(44,48,54,.76) 60%, rgba(36,40,46,.82) 100%),
+    url("assets/growth/gpt2-b2b-bg-guard-post-dark.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media (max-width: 900px) {
+  #cs-difference { background-attachment: scroll; }
+}
+#cs-difference .growth-inner { position: relative; z-index: 1; }
+#cs-difference .b2b-lead .growth-h2 { color: #fff; }
+#cs-difference .b2b-lead p { color: rgba(255,255,255,.82); }
+#cs-difference .growth-eyebrow { color: #f5a623; }
+#cs-difference .growth-eyebrow::before { background: #f5a623; }
+#cs-difference .b2b-outcomes-grid { position: relative; }
+/* white cards, dark text, extra bottom room so content isn't cramped */
+#cs-difference .b2b-outcomes-grid article {
+  background: #fff !important;
+  padding-bottom: 28px !important;
+}
+#cs-difference .b2b-outcomes-grid article h3 { color: #0e1940 !important; }
+#cs-difference .b2b-outcomes-grid article p { color: #374151 !important; }
+#cs-difference .b2b-outcomes-grid article .b2b-omedia { border-bottom: 3px solid #f5a623; }
+#cs-difference .b2b-flownode {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #3a3f45 0%, #2b2f34 72%);
+  border: 1.5px solid rgba(255,255,255,.72);
+  box-shadow: 0 6px 18px rgba(28,30,32,.30);
+  color: #f5a623;
+  z-index: 5;
+  pointer-events: none;
+}
+#cs-difference .b2b-flownode svg { width: 17px; height: 17px; display: block; }
+#cs-difference .b2b-flownode--1 { left: 33.333%; }
+#cs-difference .b2b-flownode--2 { left: 66.667%; }
+@media (max-width: 880px) { #cs-difference .b2b-flownode { display: none; } }
+</style>
+</head>
+<body class="bb-site-page b2b-wireframe-page">
+
+<nav class="bb-nav bb-top-nav" aria-label="Defencify pages">
+  <div class="bb-nav__inner">
+    <a href="index.html#cover" class="bb-nav__logo" aria-label="Defencify">
+      <img src="assets/defencify-logo-01.png" alt="Defencify" style="height:24px;width:auto;display:block" />
+    </a>
+    <div class="bb-nav__pages" aria-label="Pages">
+      <a class="bb-page-link" href="index.html">Brand guidelines</a>
+      <a class="bb-page-link" href="growth-asset-system.html">Growth asset system</a>
+      <a class="bb-page-link" href="b2b-website-wireframes.html">B2B website</a>
+      <a class="bb-page-link" href="b2b-contract-security.html" aria-current="page">Contract security</a>
+      <a class="bb-page-link" href="b2b-pricing.html">Pricing</a>
+    </div>
+  </div>
+</nav>
+
+<aside class="bb-left-toc" aria-label="Contract security sections">
+  <div class="bb-left-toc__label">Contract security</div>
+  <a class="bb-nav__link" href="#cs-overview">Overview</a>
+  <a class="bb-nav__link" href="#cs-fit">How it fits</a>
+  <a class="bb-nav__link" href="#cs-difference">The difference</a>
+  <a class="bb-nav__link" href="#cs-products">Products</a>
+  <a class="bb-nav__link" href="#cs-contact">Talk to us</a>
+</aside>
+
+<main class="growth-page b2b-wireframes b2b-v3">
+
+  <!-- HERO -->
+  <header class="b2b-hero" id="cs-overview">
+    <div class="b2b-hero__copy" data-reveal>
+      <img src="assets/defencify-logo-02-reversed.png" alt="Defencify" class="b2b-logo" />
+      <span class="growth-eyebrow">Contract security &middot; the primary vertical</span>
+      <h1 class="growth-title">Train every guard to the same standard:<br /><span class="hl">every site, every state, every shift.</span></h1>
+      <p class="growth-lede">Defencify is the security guard training platform built to deliver that consistency at scale. That performance shows up in <span class="emph">client retention and officer tenure</span>.</p>
+      <div class="b2b-hero__actions">
+        <a class="b2b-cta-primary" href="#cs-contact">Book a consultation</a>
+        <a class="b2b-cta-secondary" href="#cs-products">See the products</a>
+      </div>
+    </div>
+    <div class="b2b-hero__benefits" data-reveal style="--i:1">
+      <img class="b2b-benefits-topimg" src="assets/growth/gpt2-b2b-cs-hero-v2.jpg" alt="" />
+      <div class="b2b-benefits-inner">
+        <span class="b2b-benefits-eyebrow">What you get</span>
+        <ul class="b2b-benefits-list">
+          <li>State-approved foundational and continuing education in the states that require it</li>
+          <li>PostReady: post orders turned into interactive training guards complete before they post</li>
+          <li>Operator Console reporting your account managers can show any client</li>
+          <li>Mobile-first delivery on any device your guards already carry</li>
+          <li>ProficiencyCheck digitized exams and certification tracking with verifiable records</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOW IT FITS -->
+  <section class="growth-section" id="cs-fit">
+    <div class="growth-inner">
+      <div class="b2b-why-top" data-reveal>
+        <header class="b2b-lead b2b-lead--split">
+          <span class="growth-eyebrow">Here&rsquo;s how it fits your operation</span>
+          <h2 class="growth-h2">Built for the three sides<br /><span class="hl">of a guarding business.</span></h2>
+          <p>Your training program, your clients, and your guards. Defencify is built to serve all three.</p>
+        </header>
+        <div class="b2b-feature-img">
+          <img src="assets/growth/gpt2-b2b-academy-training-team.png" alt="Security training team running a field briefing before shift" loading="lazy" />
+        </div>
+      </div>
+      <div class="b2b-products b2b-products--three">
+        <article data-reveal>
+          <span class="b2b-ptile"><img src="assets/growth/icon-b2b-brand-academy.svg" alt="" aria-hidden="true" /></span>
+          <h3>For your training program</h3>
+          <p>Defencify delivers foundational training, CE, and certification tracking digitally, state-approved where your states require it. Your in-person trainers stay focused on the live work: drills, defensive tactics, and hands-on skills.</p>
+          <a class="bb-button bb-button--navy b2b-learn" href="#cs-products">Learn more</a>
+        </article>
+        <article data-reveal>
+          <span class="b2b-ptile"><img src="assets/growth/icon-b2b-admin-reporting.svg" alt="" aria-hidden="true" /></span>
+          <h3>For your clients</h3>
+          <p>Site-specific post orders, productized into interactive training every guard completes before they&rsquo;re scheduled. The Operator Console gives your account managers the reporting and exports they need when a client asks who&rsquo;s trained, on what, and when.</p>
+          <a class="bb-button bb-button--navy b2b-learn" href="#cs-products">Learn more</a>
+        </article>
+        <article data-reveal>
+          <span class="b2b-ptile"><img src="assets/growth/icon-b2b-mobile-course.svg" alt="" aria-hidden="true" /></span>
+          <h3>For your guards</h3>
+          <p>Defencify runs on any device a guard already carries: phone, tablet, or computer. Training happens between shifts, on breaks, or at home, so more guards complete what&rsquo;s assigned. Engagement-verified mechanics confirm a guard genuinely engaged with the material.</p>
+          <a class="bb-button bb-button--navy b2b-learn" href="#cs-products">Learn more</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPERATIONAL DIFFERENCE -->
+  <section class="growth-section b2b-outcomes" id="cs-difference" style="padding-top:80px;padding-bottom:80px">
+    <div class="growth-inner">
+      <header class="b2b-lead" data-reveal>
+        <span class="growth-eyebrow">Here&rsquo;s the operational difference</span>
+        <h2 class="growth-h2">Where contract guarding<br /><span class="hl">gets measured.</span></h2>
+        <p>Operators running Defencify across contract guarding see the program show up in how guards perform on post, in how often clients renew, and in how long guards stay in the role.</p>
+      </header>
+      <div class="b2b-verticals b2b-outcomes-grid">
+        <article data-reveal>
+          <div class="b2b-omedia"><img src="assets/growth/gpt2-b2b-outcome-incidents.png" alt="Security officer handling a post situation with confidence" loading="lazy" /></div>
+          <h3>Higher performance on post</h3>
+          <p>Defencify training is built for retention, not just completion. Guards retain the material, apply it in the moment, and bring the situational awareness and execution clients notice every shift.</p>
+          <span class="b2b-carddiv" aria-hidden="true"></span>
+        </article>
+        <article data-reveal>
+          <div class="b2b-omedia"><img src="assets/growth/gpt2-b2b-outcome-service.png" alt="A security officer courteously assisting a client in a corporate lobby" loading="lazy" /></div>
+          <h3>Stronger client retention</h3>
+          <p>When guards perform well, clients notice. They renew with operators whose guards are present, prepared, and professional, and they recommend you when other facilities ask.</p>
+          <span class="b2b-carddiv" aria-hidden="true"></span>
+        </article>
+        <article data-reveal>
+          <div class="b2b-omedia"><img src="assets/growth/gpt2-b2b-outcome-retention.png" alt="A confident, experienced security officer in a corporate setting" loading="lazy" /></div>
+          <h3>Better guard retention</h3>
+          <p>Guards who feel prepared on day one stay longer. Lower turnover means lower hiring costs, a more experienced workforce, and a stronger answer in every renewal conversation.</p>
+          <span class="b2b-carddiv" aria-hidden="true"></span>
+        </article>
+        <span class="b2b-flownode b2b-flownode--1" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.5 5.5l7 6.5-7 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="b2b-flownode b2b-flownode--2" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.5 5.5l7 6.5-7 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+      <div class="b2b-section-ctas" data-reveal>
+        <a class="b2b-cta-primary" href="b2b-pricing.html">See pricing</a>
+        <a class="b2b-cta-primary" href="#cs-contact">Book a consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="growth-section" id="cs-products">
+    <div class="growth-inner">
+      <header class="b2b-lead" data-reveal>
+        <span class="growth-eyebrow">Built to fit how your operation works</span>
+        <h2 class="growth-h2">Start with what you need now,<br /><span class="hl">add the rest as you grow.</span></h2>
+        <p>One connected platform. Bring on what your operation needs today and expand as you scale.</p>
+      </header>
+      <div class="b2b-products b2b-products--six">
+        <article data-reveal>
+          <span class="b2b-ptile"><img src="assets/growth/icon-b2b-brand-academy.svg" alt="" aria-hidden="true" /></span>
+          <h3>Defencify Academy</h3>
+          <p>The industry-standard three-tier academy, built and maintained by Defencify.</p>
+        </article>
+        <article data-reveal>
+          <span class="b2b-ptile"><img src="assets/growth/icon-b2b-market-entry.svg" alt="" aria-hidden="true" /></span>
+          <h3>Academy Architect</h3>
+          <p>Your white-labeled three-tier academy (Foundations, Specialist, Leadership), the training program your team brings to the bid.</p>
+        </article>
+        <article data-reveal>
+          <span class="b2b-ptile"><img src="assets/growth/icon-b2b-post-orders.svg" alt="" aria-hidden="true" /></span>
+          <h3>PostReady</h3>
+          <p>Your post orders, productized into interactive courses guards complete and pass before they&rsquo;re posted.</p>
+        </article>
+        <article data-reveal>
+          <span class="b2b-ptile"><img src="assets/growth/icon-b2b-assessment.svg" alt="" aria-hidden="true" /></span>
+          <h3>ProficiencyCheck</h3>
+          <p>Digitized final exams, automated certificates with verification codes, and retained records.</p>
+        </article>
+        <article data-reveal>
+          <span class="b2b-ptile"><img src="assets/growth/icon-b2b-lms-dashboard.svg" alt="" aria-hidden="true" /></span>
+          <h3>Operator Console</h3>
+          <p>Admin, reporting, participant tracking, and audit-ready records in one place.</p>
+        </article>
+        <article data-reveal>
+          <span class="b2b-ptile"><img src="assets/growth/icon-b2b-proof-record.svg" alt="" aria-hidden="true" /></span>
+          <h3>Custom Course Development</h3>
+          <p>When you need a course we don&rsquo;t have, our content team builds it with your subject-matter expert.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="b2b-closing b2b-closing--yellow" id="cs-contact">
+    <div class="b2b-closing__inner" data-reveal>
+      <span>See it with your operation in mind</span>
+      <h2>Build a guarding operation<br /><span class="hl">clients keep renewing.</span></h2>
+      <p>A 30-minute consultation built around your operation: your guards, your clients, and the states you run in.</p>
+      <div class="b2b-closing__cluster">
+        <a class="bb-button bb-button--navy" href="#cs-contact">Book a consultation</a>
+        <a class="bb-button bb-button--ghost-on-yellow" href="b2b-website-wireframes.html">Back to overview</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // build the living 51-jurisdiction grid (9 cols, diagonal wave, scattered "covered" cells)
+  var grid = document.querySelector('.b2b-stategrid');
+  if (grid) {
+    var n = parseInt(grid.getAttribute('data-cells') || '51', 10), cols = 9;
+    var on = {4:1,11:1,19:1,26:1,33:1,41:1,48:1}; // scattered yellow cells
+    for (var k = 0; k < n; k++) {
+      var cell = document.createElement('i');
+      var row = Math.floor(k / cols), col = k % cols;
+      cell.style.setProperty('--c', row + col);
+      if (on[k]) cell.className = 'is-on';
+      grid.appendChild(cell);
+    }
+  }
+
+  // count-up (rAF, ease-out, first view only)
+  function countUp(el) {
+    var target = parseFloat(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (reduce || isNaN(target)) { el.textContent = target + suffix; return; }
+    var dur = 1100, t0 = null;
+    function step(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // per-state sourcing carousel: dots, prev/next, scroll-sync, gentle autoplay
+  document.querySelectorAll('.df-carousel').forEach(function (car) {
+    var track = car.querySelector('.df-carousel__track');
+    var slides = Array.prototype.slice.call(car.querySelectorAll('.df-carousel__slide'));
+    var dotsWrap = car.querySelector('.df-carousel__dots');
+    var navs = car.querySelectorAll('.df-carousel__nav');
+    if (!track || !slides.length) return;
+    var idx = 0, timer = null;
+    slides.forEach(function (sl, i) {
+      var d = document.createElement('button');
+      d.type = 'button'; d.setAttribute('role', 'tab'); d.setAttribute('aria-label', 'State ' + (i + 1));
+      d.addEventListener('click', function () { go(i, true); });
+      dotsWrap.appendChild(d);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+    function setActive(i) { idx = i; dots.forEach(function (d, j) { d.setAttribute('aria-selected', j === i ? 'true' : 'false'); }); }
+    function go(i, user) {
+      i = (i + slides.length) % slides.length;
+      track.scrollTo({ left: slides[i].offsetLeft - track.offsetLeft, behavior: reduce ? 'auto' : 'smooth' });
+      setActive(i); if (user) restart();
+    }
+    navs.forEach(function (b) { b.addEventListener('click', function () { go(idx + parseInt(b.getAttribute('data-dir'), 10), true); }); });
+    var st;
+    track.addEventListener('scroll', function () {
+      clearTimeout(st);
+      st = setTimeout(function () {
+        var nearest = 0, min = Infinity;
+        slides.forEach(function (sl, i) { var d = Math.abs(sl.offsetLeft - track.offsetLeft - track.scrollLeft); if (d < min) { min = d; nearest = i; } });
+        setActive(nearest);
+      }, 90);
+    }, { passive: true });
+    setActive(0);
+    var auto = parseInt(car.getAttribute('data-autoplay') || '0', 10);
+    function start() { if (auto && !reduce && !timer) timer = setInterval(function () { go(idx + 1); }, auto); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function restart() { stop(); start(); }
+    ['mouseenter', 'focusin', 'pointerdown'].forEach(function (e) { car.addEventListener(e, stop); });
+    ['mouseleave', 'focusout'].forEach(function (e) { car.addEventListener(e, start); });
+    start();
+  });
+
+  var nodes = document.querySelectorAll('[data-reveal], [data-rise], .gloss');
+  function fire(target) {
+    target.classList.add('is-in');
+    target.querySelectorAll('[data-count]').forEach(countUp);
+  }
+  if (reduce || !('IntersectionObserver' in window)) {
+    nodes.forEach(fire);
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { fire(e.target); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  nodes.forEach(function (n) { io.observe(n); });
+})();
+</script>
+</body>
+</html>

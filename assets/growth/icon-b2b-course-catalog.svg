@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Course catalog icon">
+  <path d="M10 10h12v28H10zM26 10h12v28H26z" fill="none" stroke="#B2B2B5" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M14 18h4M14 25h4M30 18h4M30 25h4" fill="none" stroke="#B2B2B5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M21 38h6" fill="none" stroke="#FCAF32" stroke-width="4" stroke-linecap="round"/>
+</svg>

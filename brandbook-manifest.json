@@ -16,6 +16,13 @@
       "path": "/growth-asset-system",
       "file": "growth-asset-system.html",
       "tocLabel": "Growth asset system"
+    },
+    {
+      "id": "b2b-website-wireframes",
+      "title": "B2B Growth Blueprint",
+      "path": "/b2b-website-wireframes",
+      "file": "b2b-website-wireframes.html",
+      "tocLabel": "B2B wireframes"
     }
   ],
   "sharedShell": {
@@ -26,7 +33,8 @@
     ],
     "navigation": [
       "index.html",
-      "growth-asset-system.html"
+      "growth-asset-system.html",
+      "b2b-website-wireframes.html"
     ],
     "logoAssets": [
       "assets/defencify-logo.png",
@@ -102,6 +110,23 @@
       "assets/defencify-logo.png",
       "assets/growth/generated-icons-pro-cropped/audit-trail.png",
       "assets/growth/generated-icons-pro-cropped/access-point.png"
+    ]
+  },
+  "b2bWireframes": {
+    "file": "b2b-website-wireframes.html",
+    "sections": [
+      "overview",
+      "verticals",
+      "solutions",
+      "copilot",
+      "contact"
+    ],
+    "imageryAssets": [
+      "assets/growth/gpt2-security-incident-report.png",
+      "assets/growth/gpt2-b2b-postready-field-briefing.png",
+      "assets/growth/gpt2-b2b-vertical-guarding.png",
+      "assets/growth/gpt2-b2b-vertical-highered.png",
+      "assets/growth/gpt2-b2b-vertical-casino.png"
     ]
   },
   "verification": [
